@@ -1,211 +1,8 @@
 @extends('layout.app')
 @section('title', 'city Wall')
 @section('content')
-    <!-- =====header section===== -->
-    <header>
-        <div class="home-one">
-            <div class="top-header">
-                <div class="top-header-content">
-                    <div class="container">
-                        <div class="contact-top-information d-flex">
-                            <div class="mobile-number-email d-flex">
-                                <a href="tel:+1999806915">
-                                    <i class="bi bi-telephone phone"></i>
-                                    +199(980) 6915
-                                </a>
-                                <a href="mailto:shifamoni@gmail.com">
-                                    <i class="bi bi-envelope email"></i>
-                                    shifamoni@gmail.com
-                                </a>
-                            </div>
-                            <div class="language-socialLink d-flex ms-auto">
-                                <div class="language">
-                                    <label for="language" class="text-white">Language:</label>
-                                    <select id="language">
-                                        <option value="english">English</option>
-                                        <option value="mandarin">Mandarin</option>
-                                        <option value="hindi">Hindi</option>
-                                        <option value="french">French</option>
-                                        <option value="modern">Modern</option>
-                                        <option value="bengali">Bengali</option>
-                                        <option value="Russian">Russian</option>
-                                    </select>
-                                </div>
-                                <div class="socialLink d-flex">
-                                    <p class="d-inline-block text-white">Follow on:</p>
-                                    <ul class="d-flex">
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-vine"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar-details navbar navbar-expand-lg">
-                <div class="container">
-                    <div class="brand-logo">
-                        <a class="navbar-brand" href="index.html"><img src="images/multiple-use/header/logo.png"
-                                class="img-fluid" alt="logo"></a>
-                    </div>
-                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navigation-link collapse navbar-collapse gap-4" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link fw-normal hover-style" href="index.html" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Home</span><i class="bi bi-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="index.html">Home One</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="home-two.html">Home Tow</a>
-                                    </li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="home-three.html">Home Three</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link fw-normal hover-style" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Pages</span><i class="bi bi-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="faq-page.html">FAQ</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="projects-gird.html">Project Grid</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="projects-details.html">Project Details</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="error-page.html">Error</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link fw-normal hover-style" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Services</span><i class="bi bi-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="service.html">service</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="service-detail.html">Service Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link fw-normal hover-style" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>Teams</span><i class="bi bi-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="team.html">Team</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="team-details.html">Team Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link fw-normal hover-style" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span>News</span><i class="bi bi-chevron-down"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="blog.html">Blog Standard</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="blog-post.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fw-normal" href="contact.html"><span>Contact</span></a>
-                            </li>
-                        </ul>
-                        <div
-                            class="getStart-sideMenu d-flex align-items-center align-content-center justify-content-center justify-content-md-between gap-2 ">
-                            <div class="d-flex align-items-center ms-sm-0 ms-lg-auto ms-xl-auto ms-xxl-auto cityWall-btn"
-                                role="search">
-                                <a href="contact.html">Get A
-                                    Quote <i class="bi bi-arrow-right"></i></a>
-                            </div>
-                            <div class="said-navbar ms-2">
-                                <a href="#" class="navSidebar-button" onclick="openNav()">
-                                    <i class="bi bi-grid-3x3-gap-fill"></i>
-                                </a>
-                                <div id="mySidenav" class="sidenav">
-                                    <div class="side-logo-button">
-                                        <a href="index.html">
-                                            <img src="images/multiple-use/side-navmenu/side-logo.png" class="img-fluid"
-                                                alt="">
-                                        </a>
-                                        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-                                    </div>
-                                    <div class="our-mission ">
-                                        <h4 class="text-white">Our mission</h4>
-                                        <p>Our mission is to connect people to the heart and soul of cities around the
-                                            world. From buildings to cobblestone streets, each has its own story,
-                                            dedicated
-                                            to sharing those stories with you..</p>
-                                    </div>
-                                    <div class="contact">
-                                        <div class="con-info">
-                                            <h4 class="text-white ">Contact Info</h4>
-                                            <ul>
-                                                <li><a href="#"><i class="bi bi-geo-alt"></i> Valentin, Street Road 24,
-                                                        New
-                                                        York,
-                                                        USA - 67452</a></li>
-                                                <li> <a href="tel:+1999806915">
-                                                        <i class="bi bi-telephone phone"></i>
-                                                        +199(980) 6915
-                                                    </a></li>
-                                                <li><a href="mailto:shifamoni@gmail.com">
-                                                        <i class="bi bi-envelope email"></i>
-                                                        shifamoni@gmail.com
-                                                    </a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="social-link">
-                                            <ul>
-                                                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                                                <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+@include('components.header')
+    
     <!-- =====main section===== -->
     <main class="home-one">
         <!-- =====Banner Section===== -->
@@ -214,65 +11,73 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="images-optimization position-relative ">
-                            <img src="images/multiple-use/banner/banner-one.png" class="d-block img-fluid " alt="...">
+                            <img src="{{ asset('images/rumah-adat-muna.jpg') }}" class="d-block img-fluid " alt="...">
                             <div class="cover-images-overlay">
                                 <div class="container">
                                     <div class="banner-content ">
                                         <div class="sentence-underline">
-                                            <div class="text-white banner-semi-title">City Government Online Services
+                                            <div class="text-white banner-semi-title">
+                                                Museum Bharugano Wuna
                                             </div>
                                         </div>
+        
                                         <h1 class="text-white my-3">
-                                            <span class="cssanimation lePopUp sequence">Good Governance is Part</span>
+                                            <span class="cssanimation lePopUp sequence">Menjaga Sejarah,</span>
                                             <br>
-                                            <span class="cssanimation lePopUp sequence">of The Democracy</span>
+                                            <span class="cssanimation lePopUp sequence">Merawat Peradaban</span>
                                         </h1>
+        
                                         <div class="buttons">
                                             <div class="cityWall-btn" role="search">
-                                                <a href="contact.html">Discover More <i
-                                                        class="bi bi-arrow-right"></i></a>
-                                                <a href="contact.html">Visit Museum <i
-                                                        class="bi bi-arrow-right"></i></a>
+                                                <a href="about.html">Jelajahi Warisan Budaya <i class="bi bi-arrow-right"></i></a>
+                                                <a href="visit.html">Kunjungi Museum <i class="bi bi-arrow-right"></i></a>
                                             </div>
                                         </div>
+        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+        
+                    <!-- SLIDE 2 -->
                     <div class="carousel-item">
                         <div class="images-optimization position-relative ">
-                            <img src="images/multiple-use/banner/Lond.png" class="d-block img-fluid" alt="...">
+                            <img src="{{ asset('images/rumah-adat-muna.jpg') }}" class="d-block img-fluid" alt="...">
                             <div class="cover-images-overlay">
                                 <div class="container">
                                     <div class="banner-content ">
                                         <div class="sentence-underline">
-                                            <div class="text-white banner-semi-title">City Government Online Services
+                                            <div class="text-white banner-semi-title">
+                                                Museum Bharugano Wuna
                                             </div>
                                         </div>
+        
                                         <h1 class="text-white my-3">
-                                            <span class="cssanimation lePopUp sequence">Good Governance is Part</span>
+                                            <span class="cssanimation lePopUp sequence">Melestarikan Budaya,</span>
                                             <br>
-                                            <span class="cssanimation lePopUp sequence">of The Democracy</span>
+                                            <span class="cssanimation lePopUp sequence">Menguatkan Identitas</span>
                                         </h1>
+        
                                         <div class="buttons">
                                             <div class="cityWall-btn" role="search">
-                                                <a href="contact.html">Discover More <i
-                                                        class="bi bi-arrow-right"></i></a>
-                                                <a href="contact.html">Visit Museum <i
-                                                        class="bi bi-arrow-right"></i></a>
+                                                <a href="about.html">Pelajari Sejarah <i class="bi bi-arrow-right"></i></a>
+                                                <a href="visit.html">Rencanakan Kunjungan <i class="bi bi-arrow-right"></i></a>
                                             </div>
                                         </div>
+        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+        
                 </div>
             </div>
         </div>
+        
         <!-- =====banner card===== -->
-        <div class="banner-card" data-aos="fade-up">
+        <div class="banner-card my-5" data-aos="fade-up">
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 g-3">
                     <div class="col">
@@ -281,10 +86,9 @@
                                 class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <a href="service-detail.html">
-                                    <h4 class="card-title">Any Type of Medical
-                                        Emergency</h4>
+                                    <h4 class="card-title">Virtual Tour</h4>
                                 </a>
-                                <p class="card-text">In moments of medical emergencies, swift action is imperative.</p>
+                                <p class="card-text">Jelajahi museum secara virtual dari berbagai sudut pandang.</p>
                             </div>
                         </div>
                     </div>
@@ -294,11 +98,9 @@
                                 class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <a href="service-detail.html">
-                                    <h4 class="card-title">For Police and Law
-                                        Enforcement</h4>
+                                    <h4 class="card-title">Video Profil</h4>
                                 </a>
-                                <p class="card-text">Tortor neque sed tellus est eget dui
-                                    id ante tristique tristique dolor.</p>
+                                <p class="card-text">Temukan video profil museum dan informasi terkini tentang museum.</p>
                             </div>
                         </div>
                     </div>
@@ -308,11 +110,9 @@
                                 class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <a href="service-detail.html">
-                                    <h4 class="card-title">Recycling & Garbage
-                                        Related</h4>
+                                    <h4 class="card-title">3D Preview</h4>
                                 </a>
-                                <p class="card-text">Tortor neque sed tellus est eget dui
-                                    id ante tristique tristique dolor.</p>
+                                <p class="card-text">Jelajahi museum secara virtual dari berbagai sudut pandang.</p>
                             </div>
                         </div>
                     </div>
@@ -322,97 +122,17 @@
                                 class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
                                 <a href="service-detail.html">
-                                    <h4 class="card-title">Travels & Tourism
-                                        Information</h4>
+                                    <h4 class="card-title">Game Interaktif</h4>
                                 </a>
-                                <p class="card-text">Tortor neque sed tellus est eget dui
-                                    id ante tristique tristique dolor.</p>
+                                <p class="card-text">Bermain game interaktif untuk memperdalam pengetahuan tentang budaya dan sejarah.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <form action="#" class="mt-5 m-auto ">
-                    <div class="d-flex banner-input-field input-field">
-                        <input type="text" name="solution" id="solution"
-                            placeholder="The official guide to living, working, visiting, and investing in Texas">
-                        <a href="service-detail.html">Find Your Solution</a>
-                    </div>
-                </form>
             </div>
         </div>
-        <!-- ======About Company section======= -->
-        <section class="about-company">
-            <div class="container">
-                <div class="row align-items-center py-4">
-                    <div class="col-12 col-md-12 col-lg-5 col-xl-5" data-aos="fade-up">
-                        <div class="images">
-                            <img class="img-fluid img-one" src="images/01_home/about-company/image-01.png" alt="">
-                            <img class="img-fluid img-tow left-slider" src="images/01_home/about-company/image-02.png"
-                                alt="">
-                        </div>
-                    </div>
-                    <div class="remove-div one-first col-12 col-md-12 col-lg-7 col-xl-7" data-aos="fade-up">
-                        <div class="company-details">
-                            <div class="semi-title">
-                                <div class="animated-circles">
-                                    <div class="small-circle-start"></div>
-                                    <span class="title">About Municipality</span>
-                                </div>
-                            </div>
-                            <h2> <span class="cssanimation lePopUp sequence">Whitehall is an Liner</span> <br>
-                                <span class="cssanimation lePopUp sequence">Metropolitan Municipality </span>
-                            </h2>
-                            <p>Payment solutions enable businesses to accept payments Payment scions enable basin
-                                accept payments from city customers city securely. scions enable businesses
-                                to accept payments from city customers city securely.</p>
-
-                            <div class="company-list row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-2">
-                                <div class="col gap-3">
-                                    <ul class="gap-3">
-                                        <li> <span class="square"></span> <span>Making a quality health</span>
-                                        </li>
-                                        <li> <span class="square"></span> <span>Get Building Permission</span>
-                                        </li>
-                                        <li> <span class="square"></span> <span>Health & Education</span></li>
-                                    </ul>
-                                </div>
-                                <div class="col">
-                                    <ul class="gap-3">
-                                        <li> <span class="square"></span> <span>Most premium education</span>
-                                        </li>
-                                        <li> <span class="square"></span> <span>Business & Economy</span></li>
-                                        <li> <span class="square"></span> <span>Research & development</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="company-videos d-flex align-items-center cityWall-btn-two">
-                                <a href="about.html">Visit Museum <i class="bi bi-arrow-right"></i></a>
-                                <div class="video-and-text">
-                                    <div class="home-pages-video-popup d-flex align-content-center gap-3 ">
-                                        <button onclick="videoPlayBtnOneFirst()" id="video-play-btn-one-first"
-                                            class="video-play-btn"><i class="bi bi-play"></i></button>
-                                        <div class="video-modal-wrapper one-first">
-                                            <div class="video-modal-content">
-                                                <span onclick="videoCloseBtnOneFirst()"
-                                                    class="video-close-btn one-first">&times;</span>
-                                                <video class="web-video one-first" controls>
-                                                    <source src="videos/cityWall.mp4" type="video/mp4">
-                                                </video>
-                                            </div>
-                                        </div>
-                                        <p class="m-0 ">Video Intro <br>
-                                            About Our Municipal</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ======Find Government Services Section====== -->
+     
+        {{-- <!-- ======Find Government Services Section====== -->
         <section class="government-service">
             <div class="container">
                 <div class="section-title">
@@ -567,9 +287,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- ======Our Dedicated Investigators======= -->
-        <section class="our-investigators ">
+        {{-- <section class="our-investigators ">
             <div class="container">
                 <div class="section-title">
                     <div class="semi-title" data-aos="fade-up">
@@ -1309,282 +1029,152 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <!-- =====Latest From Our Newsroom===== -->
         <section class="newsroom m-0" data-aos="fade-up">
             <div class="container">
                 <div class="section-title">
                     <div class="Newsroom-header mb-4">
+        
+                        <!-- SEMI TITLE (diperkecil & dibuat sederhana) -->
                         <div class="semi-title" data-aos="fade-up">
-                            <div class="animated-circles justify-content-center">
+                            <div class="animated-circles justify-content-center" style="font-size: 14px;">
                                 <div class="small-circle-start"></div>
-                                <div class="title">Check our News & Blog</div>
+                                <div class="title" style="font-size: 14px; font-weight: 500;">Informasi & Berita Museum</div>
                                 <div class="small-circle-end"></div>
                             </div>
                         </div>
+        
+                        <!-- MAIN TITLE (diperkecil sedikit) -->
                         <div class="title">
-                            <h2 class="text-center cssanimation lePopUp sequence">Latest From Our Newsroom</h2>
+                            <h2 class="text-center cssanimation lePopUp sequence" style="font-size: 26px;">
+                                Berita Terbaru Museum Bharugano Wuna
+                            </h2>
                         </div>
                     </div>
                 </div>
+        
+                <!-- CARD LIST -->
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-3">
+        
+                    <!-- CARD 1 -->
                     <div class="col">
                         <div class="card h-100 border-0 rounded" data-aos="fade-right">
-                            <img src="images/multiple-use/newsroom/01.png" class="card-img-top img-fluid " alt="...">
+                            <img src="images/multiple-use/newsroom/01.png" class="card-img-top img-fluid" alt="Pameran Baru">
                             <div class="card-body p-3">
+        
                                 <div class="date-comment d-flex justify-content-between gap-3">
                                     <div class="date">
-                                        <div class="text-white fw-bold ">28</div>
-                                        <div class="text-white month">January</div>
+                                        <div class="text-white fw-bold">12</div>
+                                        <div class="text-white month">Feb</div>
                                     </div>
                                     <div class="align-items-center d-flex gap-1">
                                         <lord-icon src="https://cdn.lordicon.com/kthelypq.json" trigger="loop"
-                                            delay="2000" style="width:20px; height:20px">
-                                        </lord-icon>
+                                            delay="2000" style="width:20px; height:20px"></lord-icon>
                                         <span>Admin</span>
                                     </div>
                                     <div class="align-items-center d-flex gap-1">
                                         <lord-icon src="https://cdn.lordicon.com/fdxqrdfe.json" trigger="loop"
-                                            delay="2000" style="width:20px; height:20px;">
-                                        </lord-icon>
-                                        <span>Comm...</span>
+                                            delay="2000" style="width:20px; height:20px;"></lord-icon>
+                                        <span>10 Komentar</span>
                                     </div>
                                 </div>
+        
                                 <a href="blog.html">
-                                    <h3 class="card-title">Best Municipal City Government
-                                        2024 Year</h3>
+                                    <h3 class="card-title" style="font-size: 18px; font-weight: 600;">
+                                        Pembukaan Pameran Artefak Kerajaan Muna
+                                    </h3>
                                 </a>
                             </div>
-                            <div
-                                class="card-footer bg-white border-0 d-flex align-items-center justify-content-between mb-3 ">
+        
+                            <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between mb-3">
                                 <div class="divide-row-tow"></div>
-                                <a href="blog.html" class="more-link ms-2">More details <i
-                                        class="bi bi-arrow-up-right ps-2"></i></a>
+                                <a href="blog.html" class="more-link ms-2">Selengkapnya <i class="bi bi-arrow-up-right ps-2"></i></a>
                             </div>
                         </div>
                     </div>
+        
+                    <!-- CARD 2 -->
                     <div class="col">
                         <div class="card h-100 border-0 rounded" data-aos="fade-right">
-                            <img src="images/multiple-use/newsroom/02.png" class="card-img-top img-fluid " alt="...">
+                            <img src="images/multiple-use/newsroom/02.png" class="card-img-top img-fluid" alt="Konservasi Artefak">
                             <div class="card-body p-3">
+        
                                 <div class="date-comment d-flex justify-content-between gap-3">
                                     <div class="date">
-                                        <div class="text-white fw-bold ">28</div>
-                                        <div class="text-white month">January</div>
+                                        <div class="text-white fw-bold">08</div>
+                                        <div class="text-white month">Feb</div>
                                     </div>
                                     <div class="align-items-center d-flex gap-1">
                                         <lord-icon src="https://cdn.lordicon.com/kthelypq.json" trigger="loop"
-                                            delay="2000" style="width:20px; height:20px">
-                                        </lord-icon>
+                                            delay="2000" style="width:20px; height:20px"></lord-icon>
                                         <span>Admin</span>
                                     </div>
                                     <div class="align-items-center d-flex gap-1">
                                         <lord-icon src="https://cdn.lordicon.com/fdxqrdfe.json" trigger="loop"
-                                            delay="2000" style="width:20px; height:20px;">
-                                        </lord-icon>
-                                        <span>Comm...</span>
+                                            delay="2000" style="width:20px; height:20px;"></lord-icon>
+                                        <span>7 Komentar</span>
                                     </div>
                                 </div>
+        
                                 <a href="blog.html">
-                                    <h3 class="card-title">Leverage Agile Frameworks New
-                                        Provide City</h3>
+                                    <h3 class="card-title" style="font-size: 18px; font-weight: 600;">
+                                        Proses Konservasi Koleksi Kayu Bersejarah
+                                    </h3>
                                 </a>
                             </div>
-                            <div
-                                class="card-footer bg-white border-0 d-flex align-items-center justify-content-between mb-3 ">
+        
+                            <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between mb-3">
                                 <div class="divide-row-tow"></div>
-                                <a href="blog.html" class="more-link ms-2">More details <i
-                                        class="bi bi-arrow-up-right ps-2"></i></a>
+                                <a href="blog.html" class="more-link ms-2">Selengkapnya 
+                                    <i class="bi bi-arrow-up-right ps-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
+        
+                    <!-- CARD 3 -->
                     <div class="col">
                         <div class="card h-100 border-0 rounded" data-aos="fade-right">
-                            <img src="images/multiple-use/newsroom/03.png" class="card-img-top img-fluid " alt="...">
+                            <img src="images/multiple-use/newsroom/03.png" class="card-img-top img-fluid" alt="Program Edukasi">
                             <div class="card-body p-3">
+        
                                 <div class="date-comment d-flex justify-content-between gap-3">
                                     <div class="date">
-                                        <div class="text-white fw-bold ">28</div>
-                                        <div class="text-white month">January</div>
+                                        <div class="text-white fw-bold">03</div>
+                                        <div class="text-white month">Feb</div>
                                     </div>
                                     <div class="align-items-center d-flex gap-1">
                                         <lord-icon src="https://cdn.lordicon.com/kthelypq.json" trigger="loop"
-                                            delay="2000" style="width:20px; height:20px">
-                                        </lord-icon>
+                                            delay="2000" style="width:20px; height:20px"></lord-icon>
                                         <span>Admin</span>
                                     </div>
                                     <div class="align-items-center d-flex gap-1">
                                         <lord-icon src="https://cdn.lordicon.com/fdxqrdfe.json" trigger="loop"
-                                            delay="2000" style="width:20px; height:20px;">
-                                        </lord-icon>
-                                        <span>Comm...</span>
+                                            delay="2000" style="width:20px; height:20px;"></lord-icon>
+                                        <span>12 Komentar</span>
                                     </div>
                                 </div>
+        
                                 <a href="blog.html">
-                                    <h3 class="card-title">Supporting Business Explore
-                                        Bounce Back</h3>
+                                    <h3 class="card-title" style="font-size: 18px; font-weight: 600;">
+                                        Kegiatan Edukasi: Belajar Sejarah Muna untuk Pelajar
+                                    </h3>
                                 </a>
                             </div>
-                            <div
-                                class="card-footer bg-white border-0 d-flex align-items-center justify-content-between mb-3 ">
+        
+                            <div class="card-footer bg-white border-0 d-flex align-items-center justify-content-between mb-3">
                                 <div class="divide-row-tow"></div>
-                                <a href="blog.html" class="more-link ms-2">More details <i
-                                        class="bi bi-arrow-up-right ps-2"></i></a>
+                                <a href="blog.html" class="more-link ms-2">Selengkapnya 
+                                    <i class="bi bi-arrow-up-right ps-2"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
+        
                 </div>
             </div>
-        </section>
+        </section>        
     </main>
-    <!-- =====Footer section===== -->
-    <footer>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 subscribe-field g-4 ">
-                <div class="col ">
-                    <div class="subscribe-content position-relative ">
-                        <div class="divide-column position-absolute "></div>
-                        <h3 class="tow ms-3 mb-1 text-white">Subscribe To Newsletter</h3>
-                        <p class=" ms-3 text-white-50">Stay updated with our latest news and offers.</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <form action="#" class="d-flex ">
-                        <input type="email" name="email" id="footerEmail" placeholder="Enter Your Email Address"
-                            required>
-                        <button class="subscript" type="submit">Subscript</button>
-                    </form>
-                </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 g-4 our-details">
-                <div class="col">
-                    <div class="card h-100 bg-transparent border-0  ">
-                        <a href="index.html"><img src="images/multiple-use/footer/footer-logo.png"
-                                class="card-img-top img-fluid " alt="..."></a>
-                        <div class="card-body px-0 py-3 ">
-                            <p class="card-text text-white ">At Citywall, we are dedicated to enhancing urban living
-                                through innovative technology and sustainable practices</p>
-                        </div>
-                        <div class="social-info">
-                            <div class="position-relative">
-                                <div class="divide-column position-absolute "></div>
-                                <h4 class="ms-3 text-white ">Social Info</h4>
-                            </div>
-                            <ul class="d-flex mt-2 gap-3 ms-3  ">
-                                <li><a class="text-white " href="#"><i
-                                            class="link-icons fa-brands fa-facebook-f"></i></a></li>
-                                <li><a class="text-white " href="#"><i class="link-icons fa-brands fa-twitter"></i></a>
-                                </li>
-                                <li><a class="text-white " href="#"><i class="link-icons fa-brands fa-vine"></i></a>
-                                </li>
-                                <li><a class="text-white " href="#"><i
-                                            class="link-icons fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 bg-transparent border-0">
-                        <div class="industry-info">
-                            <div class="position-relative">
-                                <div class="divide-column position-absolute "></div>
-                                <h4 class="ms-3 text-white ">Industry Sector</h4>
-                            </div>
-                            <ul class="d-flex flex-column  mt-3 row-gap-2  ms-3  ">
-                                <li><a class="text-white " href="#">Our Time</a></li>
-                                <li><a class="text-white " href="#">How it works</a></li>
-                                <li><a class="text-white " href="#">Office Create</a></li>
-                                <li><a class="text-white " href="#">Residential Explore</a></li>
-                                <li><a class="text-white " href="#">Terms $ Service</a></li>
-                                <li><a class="text-white " href="#">Jos $ unemployment</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 bg-transparent border-0">
-                        <div class="touch-info">
-                            <div class="position-relative">
-                                <div class="divide-column position-absolute "></div>
-                                <h4 class="ms-3 text-white ">Get In Touch</h4>
-                            </div>
-                            <ul class="d-flex flex-column  mt-3 row-gap-2  ms-3  ">
-                                <li class="text-white mb-2">Valentin, Street Road 24, New York, USA - 67452</li>
-                                <li>
-                                    <a class="text-white" href="tel:+1999806915">
-                                        <i class="bi bi-telephone phone"></i>
-                                        +199(980) 6915
-                                    </a>
-                                </li>
-                                <li> <a class="text-white" href="mailto:shifamoni@gmail.com">
-                                        <i class="bi bi-envelope email"></i>
-                                        shifamoni@gmail.com
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 bg-transparent border-0">
-                        <div class="working-info">
-                            <div class="position-relative">
-                                <div class="divide-column position-absolute "></div>
-                                <h4 class="ms-3 text-white ">Working Hours</h4>
-                            </div>
-                            <ul class="mt-3 ms-3 text-white   ">
-                                <li>
-                                    <div class="d-flex justify-content-between ">
-                                        <div>Monday</div>
-                                        <div>10.00 - 11.00</div>
-                                    </div>
-                                    <hr>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between ">
-                                        <div>Tuesday</div>
-                                        <div>11.00 - 12.00</div>
-                                    </div>
-                                    <hr>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between ">
-                                        <div>Wednesday</div>
-                                        <div>01.00 - 02.00</div>
-                                    </div>
-                                    <hr>
-                                </li>
-                                <li>
-                                    <div class="d-flex justify-content-between ">
-                                        <div>Thursday</div>
-                                        <div>02.00 - 03.00</div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="term-and-condition">
-            <div class="container">
-                <div class="d-flex justify-content-between align-items-center copy-right-content ">
-                    <div class="text-white copy-right">© 2024 - 2025 | Alrights reserved by <span>Website_Stock</span>
-                    </div>
-                    <div class="button-div">
-                        <a href="#" class="up-to-down-btn to-top"><i class="bi bi-chevron-double-up"></i></a>
-                    </div>
-                    <div>
-                        <ul class="d-flex gap-3 ">
-                            <li><a class="text-white " href="#">Terms</a></li>
-                            <li><a class="text-white " href="#">Privacy</a></li>
-                            <li><a class="text-white " href="#">License</a></li>
-                            <li><a class="text-white " href="#">Privacy</a></li>
-                            <li><a class="text-white " href="#">Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+  @include('components.footer')
 @endsection

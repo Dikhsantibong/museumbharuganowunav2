@@ -85,7 +85,7 @@
                             <img src="images/multiple-use/banner-card/church-animation.gif"
                                 class="card-img-top img-fluid" alt="...">
                             <div class="card-body">
-                                <a href="service-detail.html">
+                                <a href="{{ url('/virtual-tour') }}">
                                     <h4 class="card-title">Virtual Tour</h4>
                                 </a>
                                 <p class="card-text">Jelajahi museum secara virtual dari berbagai sudut pandang.</p>

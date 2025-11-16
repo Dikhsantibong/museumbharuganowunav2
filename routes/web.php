@@ -25,3 +25,7 @@ Route::get('/agenda', function () {
 Route::get('/contact', function () {
     return view('components.contact');
 });
+
+Route::get('/virtual-tour', function () {
+    return view('fitur.virtual-tour');
+});

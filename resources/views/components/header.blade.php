@@ -59,7 +59,7 @@
                 <div class="navigation-link collapse navbar-collapse gap-4" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link fw-normal hover-style" href="{{ url('/beranda') }}" role="button"
+                            <a class="nav-link fw-normal hover-style" href="{{ url('/') }}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <span>Beranda</span>
                             </a>
@@ -167,34 +167,41 @@
                             </a>
                             <div id="mySidenav" class="sidenav">
                                 <div class="side-logo-button">
-                                    <a href="index.html">
-                                        <img src="images/multiple-use/side-navmenu/side-logo.png" class="img-fluid"
-                                            alt="">
+                                    <a href="{{ url('/beranda') }}">
+                                        <img src="{{ asset('images/logo/logo-muna.png') }}" class="img-fluid"
+                                            alt="logo" style="max-width: 80px; height: auto;">
                                     </a>
                                     <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
                                 </div>
-                                <div class="our-mission ">
-                                    <h4 class="text-white">Our mission</h4>
-                                    <p>Our mission is to connect people to the heart and soul of cities around the
-                                        world. From buildings to cobblestone streets, each has its own story,
-                                        dedicated
-                                        to sharing those stories with you..</p>
+                                <div class="our-mission text-white ">
+                                    <h4 class="text-white">Visi & Misi</h4>
+                                    <p>Visi:
+                                        <ul>
+                                            <li>Mengembangkan museum sebagai pusat edukasi dan penelitian budaya Muna</li>
+                                            <li>Menyediakan koleksi artefak sejarah dan manuskrip yang autentik</li>
+                                            <li>Menyelenggarakan program edukasi dan pameran budaya yang menarik</li>
+                                        </ul>
+                                    </p>
+                                    <p>Misi:
+                                        <ul>
+                                            <li>Mengumpulkan dan mengelola koleksi artefak sejarah dan manuskrip yang autentik</li>
+                                            <li>Menyelenggarakan program edukasi dan pameran budaya yang menarik</li>
+                                            <li>Menjalin kolaborasi dengan lembaga seni dan akademisi</li>
+                                        </ul>
+                                    </p>
                                 </div>
                                 <div class="contact">
                                     <div class="con-info">
                                         <h4 class="text-white ">Contact Info</h4>
                                         <ul>
-                                            <li><a href="#"><i class="bi bi-geo-alt"></i> Valentin, Street Road 24,
-                                                    New
-                                                    York,
-                                                    USA - 67452</a></li>
-                                            <li> <a href="tel:+1999806915">
+                                            <li><a href="#"><i class="bi bi-geo-alt"></i> Jl. Raya Bharugano, Wuna, Kabupaten Muna, Provinsi Sulawesi Tenggara</a></li>
+                                            <li> <a href="tel:+62 812-3456-7890">
                                                     <i class="bi bi-telephone phone"></i>
-                                                    +199(980) 6915
+                                                    +62 812-3456-7890
                                                 </a></li>
-                                            <li><a href="mailto:shifamoni@gmail.com">
+                                            <li><a href="mailto:museumbharuganowuna@gmail.com">
                                                     <i class="bi bi-envelope email"></i>
-                                                    shifamoni@gmail.com
+                                                    museumbharuganowuna@gmail.com
                                                 </a></li>
                                         </ul>
                                     </div>

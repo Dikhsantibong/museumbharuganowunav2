@@ -109,6 +109,10 @@ class KoleksiResource extends Resource
                 TextColumn::make('tahun_pembuatan')
                     ->label('Tahun')
                     ->sortable(),
+
+                TextColumn::make('uraian')
+                    ->label('Uraian')
+                    ->sortable(),
             ])
             ->searchable()
             ->defaultSort('id_koleksi', 'desc');

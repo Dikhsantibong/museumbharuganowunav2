@@ -3,8 +3,15 @@
 @section('content')
 <section class="content-section" data-background="#fffbf7">
     <div class="container">
+        <!-- Text Box seperti di koleksi.blade.php -->
+        <div class="row justify-content-left mb-5">
+            <div class="col-lg-8">
+                <div class="text-box">
+                    <h3>HALAMAN KONTAK</h3>
+                </div>
+            </div>
+        </div>
         <div class="row align-items-center">
-           
             <!-- Info Kontak -->
             <div class="col-lg-5">
                 <div class="contact-box">

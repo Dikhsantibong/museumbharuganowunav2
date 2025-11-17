@@ -4,30 +4,10 @@
             <img src="images/logo1.png" alt="Image" />
             Bharugano Wuna
         </a>
-
     </div>
     <!-- end logo -->
     <div class="site-menu">
-        <ul>
-            <li>
-                <a href="/" data-scroll-to>Beranda</a>
-            </li>
-            <li>
-                <a href="/tentang-kami" data-scroll-to>Tentang Kami</a>
-            </li>
-            <li>
-                <a href="/koleksi" data-scroll-to>Koleksi</a>
-            </li>
-            <li>
-                <a href="/galeri" data-scroll-to>Galeri</a>
-            </li>
-            <li>
-                <a href="/kegiatan" data-scroll-to>Kegiatan</a>
-            </li>
-            <li>
-                <a href="/kontak" data-scroll-to>Kontak</a>
-            </li>
-        </ul>
+        @include('components.nav-menu')
     </div>
     <div>
         <!-- end site-menu -->

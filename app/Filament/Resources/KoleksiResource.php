@@ -19,8 +19,7 @@ use Filament\Tables\Columns\ImageColumn;
 class KoleksiResource extends Resource
 {
     protected static ?string $model = Koleksi::class;
-
-    // protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
     protected static ?string $navigationLabel = 'Koleksi Museum';
     protected static ?string $modelLabel = 'Koleksi';
 

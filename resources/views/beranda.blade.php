@@ -6,13 +6,13 @@
         <div class="swiper-container slider-images">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-background="images/slide01.jpg">
-                    <div class="mobile-slide" data-background="images/slide013.jpg"></div>
+                    <div class="mobile-slide" data-background="images/slide0100.png"></div>
+                </div>
+                <div class="swiper-slide" data-background="images/slide0100.png">
+                    <div class="mobile-slide" data-background="images/slide0100.png"></div>
                 </div>
                 <div class="swiper-slide" data-background="images/slide01.jpg">
-                    <div class="mobile-slide" data-background="images/slide013.jpg"></div>
-                </div>
-                <div class="swiper-slide" data-background="images/slide01.jpg">
-                    <div class="mobile-slide" data-background="images/slide013.jpg"></div>
+                    <div class="mobile-slide" data-background="images/slide0100.png"></div>
                 </div>
             </div>
             <!-- end swiper-wrapper -->

@@ -702,7 +702,7 @@ button[type="submit"] i {
   position: absolute;
   right: 0;
   top: 0;
-  fill: #080808;
+  fill: #000000e1;
 }
 .side-widget svg path {
   -webkit-animation-name: side-widget-out;

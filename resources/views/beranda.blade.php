@@ -39,56 +39,56 @@
                     d="m261,30.4375c0,0 114,6 151,75c37,69 37,174 6,206.5625c-31,32.5625 -138,11.4375 -196,-19.5625c-58,-31 -86,-62 -90,-134.4375c12,-136.5625 92,-126.5625 129,-127.5625z" />
             </svg>
             <div class="swiper-wrapper">
+
+                <!-- SLIDE 1 -->
                 <div class="swiper-slide">
                     <div class="container-fluid">
                         <h1>
-                            Museums and <br />
-                            Galleries
+                            Museum Bharugano <br />
+                            Wuna
                         </h1>
                         <p>
-                            Explore hundreds of museums, galleries
-                            and historic <br />
-                            places across the UK.
+                            Menyajikan perjalanan sejarah dan kebudayaan Muna melalui <br> koleksi,
+                            arsip, dan ruang pamer yang autentik serta penuh <br> nilai historis.
                         </p>
                     </div>
-                    <!-- end container -->
                 </div>
                 <!-- end swiper-slide -->
+            
+                <!-- SLIDE 2 -->
                 <div class="swiper-slide">
                     <div class="container-fluid">
                         <h1>
-                            Discover Our <br />
-                            History
+                            Jelajahi Warisan <br />
+                            Peradaban Muna
                         </h1>
                         <p>
-                            Your support is vital and helps the
-                            Museum to share <br />
-                            the collection with the world.
+                            Temukan artefak bersejarah, tradisi leluhur, dan kisah <br> peradaban Muna
+                            yang diwariskan dari generasi ke generasi <br> untuk masyarakat masa kini.
                         </p>
                     </div>
-                    <!-- end container -->
                 </div>
                 <!-- end swiper-slide -->
+            
+                <!-- SLIDE 3 -->
                 <div class="swiper-slide">
                     <div class="container-fluid">
                         <h1>
-                            The Art of <br />
-                            North Africa
+                            Eksplorasi Digital <br />
+                            yang Imersif
                         </h1>
                         <p>
-                            Curator Peter Loovers explores the
-                            special relationship between<br />
-                            Arctic Peoples and 'man's best friend'.
+                            Nikmati pengalaman museum modern melalui tur virtual, <br> pratinjau 3D,
+                            dan media interaktif yang menghadirkanbr <br> sejarah dalam format baru.
                         </p>
                     </div>
-                    <!-- end container -->
                 </div>
                 <!-- end swiper-slide -->
-            </div>
+            </div>            
             <!-- end swiper-wrapper -->
         </div>
         <!-- end slider-texts -->
-        <div class="play-now">
+        {{-- <div class="play-now">
             <a href="videos/video.mp4" data-fancybox data-width="640" data-height="360" class="play-btn"></a>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
@@ -106,87 +106,94 @@
                     </text>
                 </g>
             </svg>
-        </div>
+        </div> --}}
         <!-- end play-now -->
     </header>
     <!-- end slider -->
-    <section class="content-section" data-background="#fffbf7">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <figure>
-                            <img src="images/title-shape.png" alt="Image" />
-                        </figure>
-                        <h2>
-                            The world's leading <br />
-                            museum of art
-                        </h2>
-                    </div>
-                    <!-- end section-title -->
-                </div>
-                <!-- end col-12 -->
-                <div class="col-lg-7">
-                    <figure class="image-box" data-scroll data-scroll-speed="-1">
-                        <img src="images/side-imag01.jpg" alt="Image" />
+<section class="content-section" data-background="#fffbf7">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="section-title text-center">
+                    <figure>
+                        <img src="images/title-shape.png" alt="Image" />
                     </figure>
+                    <h2>
+                        Pusat Warisan Sejarah & Budaya Muna
+                    </h2>
                 </div>
-                <!-- end col-7 -->
-                <div class="col-lg-5">
-                    <div class="side-icon-list right-side">
-                        <ul>
-                            <li>
-                                <figure>
-                                    <img src="images/icon01.png" alt="Image" />
-                                </figure>
-                                <div class="content">
-                                    <h5>Opening times</h5>
-                                    <p>
-                                        From 27 August<br />
-                                        Thursday – Sunday:
-                                        11.00-19.00
-                                    </p>
-                                </div>
-                                <!-- end content -->
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/icon02.png" alt="Image" />
-                                </figure>
-                                <div class="content">
-                                    <h5>Book Online</h5>
-                                    <p>
-                                        Some exhibitions and events
-                                        carry <br />
-                                        a separate charge
-                                    </p>
-                                    <a href="#">Join Now and Book Online</a>
-                                </div>
-                                <!-- end content -->
-                            </li>
-                            <li>
-                                <figure>
-                                    <img src="images/icon03.png" alt="Image" />
-                                </figure>
-                                <div class="content">
-                                    <h5>Where You Visit</h5>
-                                    <p>
-                                        Cromwell New Street Road<br />
-                                        London, SW7 2RL
-                                    </p>
-                                </div>
-                                <!-- end content -->
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end side-icon-list -->
-                </div>
-                <!-- end col-5 -->
+                <!-- end section-title -->
             </div>
-            <!-- end row -->
+            <!-- end col-12 -->
+
+            <div class="col-lg-7">
+                <figure class="image-box" data-scroll data-scroll-speed="-1">
+                    <img src="images/side-imag01.jpg" alt="Image" />
+                </figure>
+            </div>
+            <!-- end col-7 -->
+
+            <div class="col-lg-5">
+                <div class="side-icon-list right-side">
+                    <ul>
+
+                        <!-- ITEM 1 -->
+                        <li>
+                            <figure>
+                                <img src="images/icon01.png" alt="Image" />
+                            </figure>
+                            <div class="content">
+                                <h5>Jam Kunjungan</h5>
+                                <p>
+                                    Senin – Jumat : 09.00 – 16.00 <br />
+                                    Sabtu – Minggu : 10.00 – 17.00
+                                </p>
+                            </div>
+                            <!-- end content -->
+                        </li>
+
+                        <!-- ITEM 2 -->
+                        <li>
+                            <figure>
+                                <img src="images/icon02.png" alt="Image" />
+                            </figure>
+                            <div class="content">
+                                <h5>Pemesanan Tiket</h5>
+                                <p>
+                                    Beberapa tur digital dan acara edukasi <br />
+                                    memerlukan pemesanan terlebih dahulu.
+                                </p>
+                                <a href="#">Pesan Tiket & Layanan</a>
+                            </div>
+                            <!-- end content -->
+                        </li>
+
+                        <!-- ITEM 3 -->
+                        <li>
+                            <figure>
+                                <img src="images/icon03.png" alt="Image" />
+                            </figure>
+                            <div class="content">
+                                <h5>Lokasi Museum</h5>
+                                <p>
+                                    Jl. Museum Bharugano Wuna <br />
+                                    Kabupaten Muna, Sulawesi Tenggara
+                                </p>
+                            </div>
+                            <!-- end content -->
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- end side-icon-list -->
+            </div>
+            <!-- end col-5 -->
+
         </div>
-        <!-- end container -->
-    </section>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
     <!-- end content-section -->
     <section class="content-section">
         <div class="container">

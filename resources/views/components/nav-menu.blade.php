@@ -12,7 +12,7 @@
         <a href="/galeri" data-scroll-to>Galeri</a>
     </li>
     <li>
-        <a href="/kegiatan" data-scroll-to>Kegiatan</a>
+        <a href="/berita" data-scroll-to>Kegiatan</a>
     </li>
     <li>
         <a href="/kontak" data-scroll-to>Kontak</a>

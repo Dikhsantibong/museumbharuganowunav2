@@ -59,6 +59,30 @@ class KegiatanResource extends Resource
                 Forms\Components\RichEditor::make('deskripsi')
                     ->label('Deskripsi')
                     ->columnSpanFull(),
+
+                // ==============================
+                //   GALERI FOTO KEGIATAN
+                // ==============================
+                Forms\Components\Repeater::make('fotos')
+                    ->label('Galeri Foto')
+                    ->relationship('fotos')   // penting!
+                    ->schema([
+                        Forms\Components\FileUpload::make('foto')
+                            ->label('Foto')
+                            ->image()
+                            ->directory('kegiatan/foto')
+                            ->required(),
+
+                        Forms\Components\TextInput::make('caption')
+                            ->label('Caption Foto')
+                            ->maxLength(255),
+                    ])
+                    ->columnSpanFull()
+                    ->collapsible()
+                    ->defaultItems(0)
+                    ->addActionLabel('Tambah Foto')
+                    ->visible(fn($livewire) => $livewire instanceof \App\Filament\Resources\KegiatanResource\Pages\CreateKegiatan)
+
             ]);
     }
 

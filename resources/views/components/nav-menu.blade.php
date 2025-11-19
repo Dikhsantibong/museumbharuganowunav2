@@ -12,6 +12,9 @@
         <a href="/galery" data-scroll-to>Galeri</a>
     </li>
     <li>
+        <a href="/blog" data-scroll-to>Blog</a>
+    </li>
+    <li>
         <a href="/berita" data-scroll-to>Kegiatan</a>
     </li>
     <li>

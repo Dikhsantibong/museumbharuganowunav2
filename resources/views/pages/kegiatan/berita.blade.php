@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <section class="content-section" data-background="#fffbf7">
     <div class="container">
         <!-- Judul Halaman Berita -->
@@ -18,20 +17,33 @@
             @forelse($berita as $item)
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
-                        @if(!empty($item->gambar))
-                            <img src="{{ asset('storage/' . $item->gambar) }}" class="card-img-top" alt="{{ $item->judul }}">
+                        @php
+                            $thumb = $item->thumbnail;
+                        @endphp
+                        @if($thumb)
+                            <img src="{{ asset('storage/' . $thumb) }}" class="card-img-top" alt="{{ $item->judul }}">
                         @else
                             <img src="https://via.placeholder.com/400x250?text=No+Image" class="card-img-top" alt="No Image">
                         @endif
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <p class="card-text">{{ \Illuminate\Support\Str::limit(strip_tags($item->isi), 120) }}</p>
+                            <h5 class="card-title">
+                                {{ $item->judul }}
+                            </h5>
+                            <div class="mb-2">
+                                <span class="badge bg-secondary">{{ optional($item->kategori)->nama_kategori ?? '-' }}</span>
+                                <span class="text-muted small ms-2">
+                                    {{ \Carbon\Carbon::parse($item->tanggal_publikasi ?: $item->created_at)->translatedFormat('d F Y') }}
+                                </span>
+                                <span class="text-muted small ms-2">
+                                    <i class="far fa-comments"></i>
+                                    {{ $item->komentar->count() }} Komentar
+                                </span>
+                            </div>
+                            <p class="card-text">
+                                {{ \Illuminate\Support\Str::limit(strip_tags($item->konten), 140) }}
+                            </p>
                         </div>
-                        <div class="card-footer bg-white border-0">
-                            <small class="text-muted">
-                                {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
-                            </small>
-                        </div>
+                        <!-- card-footer opsional: link baca detail, dsb. -->
                     </div>
                 </div>
             @empty
@@ -42,5 +54,4 @@
         </div>
     </div>
 </section>
-
 @endsection

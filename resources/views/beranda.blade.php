@@ -110,6 +110,49 @@
         <!-- end play-now -->
     </header>
     <!-- end slider -->
+    
+    <!-- 4 CARD FLOATING (VIDEO, VT, ROBLOX, QUIZ) -->
+    <div class="container" style="margin-top:-130px; margin-bottom:40px; position:relative; z-index:9;">
+        <div class="row justify-content-center gy-4">
+            <!-- Card 1: Video Profil -->
+            <div class="col-md-3">
+                <div class="card shadow-lg text-center py-4 h-100" style="min-height: 230px;">
+                    <div style="font-size:40px; margin-bottom:18px;"><i class="fas fa-play-circle"></i></div>
+                    <h5 style="font-family:'Cinzel',serif; font-weight:bold;">Video Profil</h5>
+                    <p style="font-size: 16px;padding: 10px; ">Lihat profil Museum Bharugano Wuna dalam format video singkat dan inspiratif.</p>
+                    <a href="https://www.youtube.com/watch?v=xxxxxxx" target="_blank" class="custom-button" style="margin-top:12px;">Tonton Video</a>
+                </div>
+            </div>
+            <!-- Card 2: Virtual Tour -->
+            <div class="col-md-3">
+                <div class="card shadow-lg text-center py-4 h-100" style="min-height: 230px;">
+                    <div style="font-size:40px; margin-bottom:18px;"><i class="fas fa-vr-cardboard"></i></div>
+                    <h5 style="font-family:'Cinzel',serif; font-weight:bold;">Virtual Tour</h5>
+                    <p style="font-size: 16px; padding: 15px;">Jelajahi museum secara digital dari mana saja melalui virtual tour imersif.</p>
+                    <a href="/virtual-tour" target="_blank" class="custom-button" style="margin-top:12px;">Coba Sekarang</a>
+                </div>
+            </div>
+            <!-- Card 3: Game Roblox -->
+            <div class="col-md-3">
+                <div class="card shadow-lg text-center py-4 h-100" style="min-height: 230px;">
+                    <div style="font-size:40px; margin-bottom:18px;"><i class="fab fa-roblox"></i></div>
+                    <h5 style="font-family:'Cinzel',serif; font-weight:bold;">Game Roblox</h5>
+                    <p style="font-size: 16px; padding: 10px;">Seru! Masuki dunia Roblox bertema museum dan mainkan edukasi interaktif!</p>
+                    <a href="https://www.roblox.com/games/104634170739997/" target="_blank" class="custom-button" style="margin-top:12px;">Mainkan Game</a>
+                </div>
+            </div>
+            <!-- Card 4: Quiz -->
+            <div class="col-md-3">
+                <div class="card shadow-lg text-center py-4 h-100" style="min-height: 230px;">
+                    <div style="font-size:40px; margin-bottom:18px;"><i class="fas fa-question-circle"></i></div>
+                    <h5 style="font-family:'Cinzel',serif; font-weight:bold;">Kuis Museum</h5>
+                    <p style="font-size: 16px; padding: 10px;">Uji pengetahuan kamu tentang Museum Bharugano Wuna dan sejarah Muna lewat pertanyaan seru!</p>
+                    <a href="/kuis-museum" target="_blank" class="custom-button" style="margin-top:12px;">Mulai Kuis</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END 3 CARD FLOATING -->
 <section class="content-section" data-background="#fffbf7">
     <div class="container">
         <div class="row align-items-center">
@@ -128,7 +171,7 @@
 
             <div class="col-lg-7">
                 <figure class="image-box" data-scroll data-scroll-speed="-1">
-                    <img src="images/side-imag01.jpg" alt="Image" />
+                    <img src="images/secondcontent.JPG" alt="Image" />
                 </figure>
             </div>
             <!-- end col-7 -->
@@ -197,109 +240,94 @@
     <!-- end content-section -->
     <section class="content-section">
         <div class="container">
+    
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="section-title">
                         <figure>
                             <img src="images/title-shape.png" alt="Image" />
                         </figure>
-                        <h6>DON’T MISS THE OPPORTUNITY</h6>
-                        <h2>Upcoming Events</h2>
+                        <h6>Koleksi Pilihan Museum</h6>
+                        <h2>Koleksi Terbaik & Unggulan</h2>
                     </div>
                     <!-- end section-title -->
                 </div>
-                <!-- end col-9 -->
+    
                 <div class="col-lg-3">
-                    <a href="#" class="circle-button">BOOK AN <br />
-                        EVENT</a>
+                    <a href="#" class="circle-button">BUKU <br />KOLEKSI</a>
                 </div>
                 <!-- end col-3 -->
             </div>
-            <!-- end row -->
+    
             <div class="row justify-content-center">
+    
+                <!-- ITEM 1 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="exhibition-box" data-scroll data-scroll-speed="-1">
                         <figure>
-                            <a href="#"><img src="images/event01.jpg" alt="Image" class="img" /></a>
+                            <a href="#"><img src="images/koleksi1.JPG" alt="Image" class="img" /></a>
                             <div class="info">
                                 <figure class="i">
                                     <img src="images/icon-info.png" alt="Image" />
                                 </figure>
-                                <span>50% off exhibitions</span>
+                                <span>Koleksi Unggulan</span>
                             </div>
-                            <!-- end info -->
                         </figure>
                         <div class="content-box">
-                            <h4>
-                                <a href="#">Artemisia Gentileschi talk with
-                                    Maria</a>
-                            </h4>
-                            <p>15 August – 31 October 2020</p>
+                            <h4><a href="#">Perhiasan Tradisional Muna</a></h4>
+                            <p>Artefak budaya dengan nilai sejarah tinggi.</p>
                         </div>
-                        <!-- end content-box -->
                     </div>
-                    <!-- end exhibition-box -->
                 </div>
-                <!-- end col-4 -->
+    
+                <!-- ITEM 2 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="exhibition-box" data-scroll data-scroll-speed="1">
                         <figure>
-                            <a href="#"><img src="images/event02.jpg" alt="Image" class="img" /></a>
+                            <a href="#"><img src="images/koleksi2.jpg" alt="Image" class="img" /></a>
                             <div class="info">
                                 <figure class="i">
                                     <img src="images/icon-info.png" alt="Image" />
                                 </figure>
-                                <span>50% off exhibitions</span>
+                                <span>Koleksi Terbaik</span>
                             </div>
-                            <!-- end info -->
                         </figure>
                         <div class="content-box">
-                            <h4>
-                                <a href="#">Arctic culture and climate
-                                    Exhibition</a>
-                            </h4>
-                            <p>22 Oct 2020 - 21 Feb 2023</p>
+                            <h4><a href="#">Keris Pusaka Keraton</a></h4>
+                            <p>Simbol kebesaran dan warisan sejarah.</p>
                         </div>
-                        <!-- end content-box -->
                     </div>
-                    <!-- end exhibition-box -->
                 </div>
-                <!-- end col-4 -->
+    
+                <!-- ITEM 3 -->
                 <div class="col-lg-4 col-md-6">
                     <div class="exhibition-box" data-scroll data-scroll-speed="-0.5">
                         <figure>
-                            <a href="#"><img src="images/event03.jpg" alt="Image" class="img" /></a>
+                            <a href="#"><img src="images/koleksi3.JPG" alt="Image" class="img" /></a>
                             <div class="info">
                                 <figure class="i">
                                     <img src="images/icon-info.png" alt="Image" />
                                 </figure>
-                                <span>50% off exhibitions</span>
+                                <span>Koleksi Favorit Pengunjung</span>
                             </div>
-                            <!-- end info -->
                         </figure>
                         <div class="content-box">
-                            <h4>
-                                <a href="#">Thomas Becket murder and the
-                                    making of a saint</a>
-                            </h4>
-                            <p>22 Apr 2023 - 22 Aug 2023</p>
+                            <h4><a href="#">Patung Kayu Ukir Tradisional</a></h4>
+                            <p>Karya seni penuh detail dan nilai estetika.</p>
                         </div>
-                        <!-- end content-box -->
                     </div>
-                    <!-- end exhibition-box -->
                 </div>
-                <!-- end col-4 -->
+    
                 <div class="col-12 text-center">
-                    <a href="#" class="custom-button">VIEW ALL UPCOMING EVENTS</a>
+                    <a href="#" class="custom-button">LIHAT SEMUA KOLEKSI</a>
                 </div>
-                <!-- end col-12 -->
+    
             </div>
-            <!-- end row -->
+    
         </div>
-        <!-- end container -->
-    </section>
+    </section>    
     <!-- end content-section -->
-    <section class="content-section no-bottom-spacing bottom-white" data-background="#fffbf7">
+    {{-- <section class="content-section no-bottom-spacing bottom-white" data-background="#fffbf7">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -426,8 +454,8 @@
         </div>
         <!-- end horizontal-scroll -->
     </section>
-    <!-- end content-section -->
-    <section class="content-section no-bottom-spacing">
+    <!-- end content-section --> --}}
+    {{-- <section class="content-section no-bottom-spacing">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -536,236 +564,273 @@
         </div>
         <!-- end container -->
     </section>
-    <!-- end content-section -->
+    <!-- end content-section --> --}}
     <section class="content-section">
         <div class="container">
             <div class="row g-0 align-items-center">
+    
                 <div class="col-lg-6">
                     <div class="art-slider">
+    
                         <div class="titles">
-                            <h6>Art Collection</h6>
+                            <h6>Koleksi Seni & Budaya</h6>
                             <h2>
-                                History of <br />
-                                Barnes
+                                Koleksi Ikonik <br />
+                                Museum Kita
                             </h2>
                         </div>
-                        <!-- end titles -->
+    
                         <div class="swiper-container art-slider-content">
                             <div class="swiper-wrapper">
+    
                                 <div class="swiper-slide">
                                     <span>01</span>
                                     <h3>
-                                        Venus <br />
-                                        de Milo
+                                        Patung Tradisional <br />
+                                        Nusantara
                                     </h3>
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <span>02</span>
                                     <h3>
-                                        Les Demoiselles <br />
-                                        d'Avignon
+                                        Baju Adat <br />
+                                        Kerajaan Muna
                                     </h3>
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <span>03</span>
                                     <h3>
-                                        Mona <br />
-                                        Lisa
+                                        Keris Pusaka <br />
+                                        Warisan Leluhur
                                     </h3>
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <span>04</span>
                                     <h3>
-                                        L'Arlesienne: <br />
-                                        Madame Ginoux
+                                        Lukisan Sejarah <br />
+                                        Benteng Muna
                                     </h3>
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <span>05</span>
                                     <h3>
-                                        Cuckoo <br />
-                                        Clocks
+                                        Artefak <br />
+                                        Peradaban Kuno
                                     </h3>
                                 </div>
-                                <!-- end swiper-slide -->
+    
                             </div>
-                            <!-- end swiper-wrapper -->
                         </div>
-                        <!-- end art-slider-content -->
+    
                     </div>
-                    <!-- end art-slider -->
                 </div>
-                <!-- end col-6 -->
+    
                 <div class="col-lg-6">
                     <div class="art-slider" data-scroll data-scroll-speed="1">
+    
                         <div class="swiper-container art-slider-images">
                             <div class="swiper-wrapper">
+    
                                 <div class="swiper-slide">
                                     <img src="images/art-slide01.jpg" alt="Image" />
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <img src="images/art-slide02.jpg" alt="Image" />
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <img src="images/art-slide03.jpg" alt="Image" />
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <img src="images/art-slide04.jpg" alt="Image" />
                                 </div>
-                                <!-- end swiper-slide -->
+    
                                 <div class="swiper-slide">
                                     <img src="images/art-slide05.jpg" alt="Image" />
                                 </div>
-                                <!-- end swiper-slide -->
+    
                             </div>
-                            <!-- end swiper-wrapper -->
                         </div>
-                        <!-- end art-slider-images -->
+    
                     </div>
-                    <!-- end art-slider -->
                 </div>
-                <!-- end col-6 -->
+    
             </div>
-            <!-- end row -->
         </div>
-        <!-- end container -->
-    </section>
-    <!-- end content-section -->
+    </section>    
     <section class="content-section">
         <div class="video-bg">
             <video src="videos/video.mp4" loop autoplay playsinline muted></video>
         </div>
         <!-- end video-bg -->
+    
         <div class="container">
             <div class="cta-box" data-scroll data-scroll-speed="-1">
-                <h6>JOIN TODAY AND ENJOY UNLIMITED</h6>
+                <h6>AYO BERPARTISIPASI</h6>
                 <h2>
-                    exhibitions, Members <br />
-                    only and more
+                    Bantu Kami Meningkatkan Layanan <br />
+                    Museum Bharugano Wuna
                 </h2>
-                <a href="#" class="custom-button">BECOME A MEMBER</a>
+                
+    
+                <a href="#" class="custom-button">ISI SURVEI</a>
             </div>
             <!-- end cta-box -->
         </div>
         <!-- end container -->
     </section>
+    
+    
     <!-- end content-section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="section-title text-center">
-                        <figure>
-                            <img src="images/title-shape.png" alt="Image" />
-                        </figure>
-                        <h6>Get Latest Updates and News</h6>
-                        <h2>Recent News</h2>
-                    </div>
-                    <!-- end section-title -->
+   <section class="content-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="section-title text-center">
+                    <figure>
+                        <img src="images/title-shape.png" alt="Image" />
+                    </figure>
+                    <h6>Informasi & Pembaruan Terkini</h6>
+                    <h2>Berita Museum</h2>
                 </div>
-                <!-- end col-12 -->
             </div>
-            <!-- end row -->
         </div>
-        <!-- end container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="recent-news">
-                        <div class="content-box">
-                            <small>Dec 26, 2020</small>
-                            <h3>
-                                The Ultimate Guide To Knots Practice
-                                Kit
-                            </h3>
-                            <p>
-                                Learn to tie over 250 knots with
-                                step-by-step instructions. Supplied
-                                with 4...
-                            </p>
-                            <a href="#" class="custom-link">Continue reading</a>
-                        </div>
-                        <!-- end content-box -->
-                        <figure data-scroll data-scroll-speed="-1">
-                            <img src="images/recent-news01.jpg" alt="Image" />
-                        </figure>
+    </div>
+
+    <!-- NEWS LIST -->
+    <div class="container">
+        <div class="row">
+
+            <!-- NEWS ITEM 1 -->
+            <div class="col-12">
+                <div class="recent-news">
+                    <div class="content-box">
+                        <small>Jan 12, 2025</small>
+                        <h3>Pameran Koleksi Kerajaan Muna Resmi Dibuka</h3>
+                        <p>
+                            Museum Bharugano Wuna membuka pameran khusus yang menampilkan 
+                            artefak warisan Kerajaan Muna, termasuk tombak pusaka, perangkat 
+                            kerajaan, serta dokumentasi visual perjalanan sejarahnya.
+                        </p>
+                        <a href="#" class="custom-link">Baca selengkapnya</a>
                     </div>
-                    <!-- end recent-news -->
+                    <figure data-scroll data-scroll-speed="-1">
+                        <img src="images/recent-news04.jpg" alt="Image" />
+                    </figure>
                 </div>
-                <!-- end col-8 -->
-                <div class="col-12">
-                    <div class="recent-news">
-                        <div class="content-box">
-                            <small>Dec 26, 2020</small>
-                            <h3>
-                                The Ultimate Guide To Knots Practice
-                                Kit
-                            </h3>
-                            <p>
-                                Learn to tie over 250 knots with
-                                step-by-step instructions. Supplied
-                                with 4...
-                            </p>
-                            <a href="#" class="custom-link">Continue reading</a>
-                        </div>
-                        <!-- end content-box -->
-                        <figure data-scroll data-scroll-speed="1">
-                            <img src="images/recent-news02.jpg" alt="Image" />
-                        </figure>
-                    </div>
-                    <!-- end recent-news -->
-                </div>
-                <!-- end col-9 -->
-                <div class="col-12 text-center">
-                    <a href="news.html" class="circle-button">SEE ALL<br />
-                        NEWS</a>
-                </div>
-                <!-- end col-12 -->
             </div>
-            <!-- end row -->
+
+            <!-- NEWS ITEM 2 -->
+            <div class="col-12">
+                <div class="recent-news">
+                    <div class="content-box">
+                        <small>Dec 28, 2024</small>
+                        <h3>Program Edukasi “Belajar di Museum” untuk Pelajar</h3>
+                        <p>
+                            Program edukasi terbaru diperkenalkan untuk siswa SD hingga SMA, 
+                            menghadirkan tur edukasi, pemutaran film sejarah, dan workshop 
+                            kebudayaan daerah secara langsung.
+                        </p>
+                        <a href="#" class="custom-link">Baca selengkapnya</a>
+                    </div>
+                    <figure data-scroll data-scroll-speed="1">
+                        <img src="images/recent-news05.jpg" alt="Image" />
+                    </figure>
+                </div>
+            </div>
+
+            <!-- SEE ALL BUTTON -->
+            <div class="col-12 text-center">
+                <a href="news.html" class="circle-button">LIHAT<br />SEMUA BERITA</a>
+            </div>
         </div>
-        <!-- end container -->
-    </section>
+    </div>
+</section>
+
     <!-- end content-section -->
-    <section class="content-section no-spacing" data-background="#94ffc4">
+    <section class="content-section no-spacing py-5" data-background="#94ffc4" style="background:#94ffc4;">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-12">
-                    <div class="newsletter-box">
-                        <div class="form">
-                            <div class="titles">
-                                <h6>Subscribe Newsletter</h6>
-                                <h2>
-                                    Sign up to get the latest news
-                                </h2>
+                    <div class="newsletter-box d-flex flex-wrap align-items-center justify-content-between p-4 rounded-4 shadow-sm" style="background:white;">
+                        
+                        <!-- FORM -->
+                        <div class="form" style="max-width:550px;">
+                            <div class="titles mb-3">
+                                <h6 class="text-uppercase text-muted mb-1">Subscribe Newsletter</h6>
+                                <h2 class="fw-bold">Sign up to get the latest news</h2>
                             </div>
-                            <!-- end titles -->
-                            <div class="inner">
-                                <input type="email" placeholder="Enter your e-mail address" />
-                                <input type="submit" value="SIGN UP" />
+    
+                            <div class="inner d-flex flex-wrap gap-2">
+                                <input type="email" placeholder="Enter your e-mail address" class="newsletter-input" />
+                                <input type="submit" value="SIGN UP" class="newsletter-btn" />
                             </div>
-                            <!-- end inner -->
-                            <small>Will be used in accordance with our
-                                <a href="#">Privacy Policy</a></small>
+    
+                            <small class="d-block mt-3 text-muted">
+                                Will be used in accordance with our <a href="#" class="text-decoration-underline">Privacy Policy</a>
+                            </small>
                         </div>
-                        <!-- end form -->
-                        <figure class="newsletter-image" data-scroll data-scroll-speed="0.7">
-                            <img src="images/newsletter-image.png" alt="Image" />
+    
+                        <!-- IMAGE -->
+                        <figure class="newsletter-image mt-4 mt-md-0" data-scroll data-scroll-speed="0.7">
+                            <img src="images/newsletter-image.png" alt="Image" class="newsletter-img" style="max-width:350px;">
                         </figure>
+    
                     </div>
-                    <!-- end newsletter-box -->
                 </div>
-                <!-- end col-12 -->
             </div>
-            <!-- end row -->
         </div>
-        <!-- end container -->
     </section>
+    
+    <style>
+        .newsletter-input {
+            padding: 12px 18px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 230px;
+            transition: 0.3s ease;
+        }
+    
+        .newsletter-input:focus {
+            border-color: #00b86f;
+            box-shadow: 0 0 8px rgba(0, 184, 111, 0.2);
+            outline: none;
+        }
+    
+        .newsletter-btn {
+            padding: 12px 24px;
+            background: #00b86f;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+    
+        .newsletter-btn:hover {
+            background: #00995c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+    
+        .newsletter-img {
+            width: 100%;
+            height: auto;
+            animation: float 4s ease-in-out infinite;
+        }
+    
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+    
 @endsection

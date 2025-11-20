@@ -28,7 +28,7 @@
 
         <!-- GAMBAR UTAMA -->
         <div class="row justify-content-left mb-5">
-            <div class="col-lg-10 text-center">
+            <div class="col-lg-8 text-center">
                 <figure class="image-box">
                     <img 
                         src="https://butonpos.fajar.co.id/wp-content/uploads/2022/02/IMG-20220214-WA0021.jpg" 
@@ -69,7 +69,7 @@
 
         <!-- GAMBAR KOLEKSI -->
         <div class="row justify-content-left mb-5">
-            <div class="col-lg-10 text-center">
+            <div class="col-lg-8 text-center">
                 <figure>
                     <img 
                         src="https://telisik.id/wp-content/uploads/2022/03/Rumah-Adat-Muna-1024x576.jpg" 

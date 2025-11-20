@@ -7,7 +7,7 @@
         <div class="row justify-content-left mb-5">
             <div class="col-lg-8">
                 <div class="text-box">
-                    <h3>HALAMAN KONTAK</h3>
+                    <h5>HALAMAN KONTAK</h5>
                 </div>
             </div>
         </div>

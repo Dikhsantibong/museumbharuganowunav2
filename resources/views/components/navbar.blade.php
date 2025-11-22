@@ -1,27 +1,10 @@
-<nav class="navbar">
-    <div class="logo">
-        <a href="/">
-            <img src="images/logo1.png" alt="Image" />
-            Bharugano Wuna
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <h1 class="sitename">Bharugano Wuna</h1>
         </a>
-    </div>
-    <!-- end logo -->
-    <div class="site-menu">
         @include('components.nav-menu')
+        <a class="btn-getstarted" href="buy-tickets.html">Buy Tickets</a>
     </div>
-    <div>
-        <!-- end site-menu -->
-        <div class="search-button">
-            <i class="far fa-search"></i>
-        </div>
-        <!-- end search-button -->
-        <div class="hamburger-menu">
-            <svg class="hamburger" width="30" height="30" viewBox="0 0 30 30">
-                <path class="line line-top" d="M0,9h30" />
-                <path class="line line-center" d="M0,15h30" />
-                <path class="line line-bottom" d="M0,21h30" />
-            </svg>
-        </div>
-        <!-- end hamburger-menu -->
-    </div>
-</nav>
+</header>

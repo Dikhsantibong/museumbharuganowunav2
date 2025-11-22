@@ -10,7 +10,7 @@ class KoleksiController extends Controller
 {
     public function koleksi()
     {
-        $koleksi = Koleksi::all();
+        $koleksi = Koleksi::with('foto')->get();
         $berita_populer = Berita::withCount('komentar')->orderByDesc('komentar_count')->take(4)->get();
         return view('pages.koleksi.koleksi', compact('koleksi', 'berita_populer'));
     }
@@ -20,4 +20,5 @@ class KoleksiController extends Controller
         $koleksi = Koleksi::with('foto')->findOrFail($id);
         return view('pages.koleksi.detail', compact('koleksi'));
     }
+
 }

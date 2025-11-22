@@ -16,36 +16,72 @@
                     </ol>
                 </nav>
             </div>
-        </div><!-- End Page Title -->
+        </div>
+        <!-- End Page Title -->
+
         <section id="gallery" class="gallery section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
+
+                        @php
+                            $columns = 3;
+                            $total = count($koleksi);
+                            $rows = ceil($total / $columns);
+                        @endphp
+
                         <div class="row g-3 justify-content-center">
-                            @foreach ($koleksi as $data)
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="card rounded-4">
-                                        <div class="gallery-item h-100 rounded-bottom-0 rounded-top-4">
-                                            <img src="{{ $data->foto->first() ? asset('storage/' . $data->foto->first()->foto) : asset('no-image.jpg') }}"
-                                                class="img-fluid" alt="">
-                                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                                <a href="{{ $data->foto->first() ? asset('storage/' . $data->foto->first()->foto) : asset('no-image.jpg') }}"
-                                                    title="{{ $data->nama_koleksi }}" class="glightbox preview-link"><i
-                                                        class="bi bi-arrows-angle-expand"></i></a>
-                                                <a href="gallery-single.html" class="details-link"><i
-                                                        class="bi bi-link-45deg"></i></a>
+
+                            @for ($col = 0; $col < $columns; $col++)
+                                <div class="col-lg-4 col-md-4">
+
+                                    @for ($row = 0; $row < $rows; $row++)
+                                        @php
+                                            $index = $col * $rows + $row;
+                                            if ($index >= $total) {
+                                                break;
+                                            }
+                                            $data = $koleksi[$index];
+                                        @endphp
+
+                                        <div class="card rounded-4 mb-4">
+                                            <div class="gallery-item h-100 rounded-bottom-0 rounded-top-4">
+                                                <img src="{{ $data->foto->first()
+                                                    ? asset('storage/' . $data->foto->first()->foto)
+                                                    : asset('assets/img/not-found/image.png') }}"
+                                                    class="img-fluid" alt="">
+
+                                                <div class="gallery-links d-flex align-items-center justify-content-center">
+                                                    <a href="{{ $data->foto->first()
+                                                        ? asset('storage/' . $data->foto->first()->foto)
+                                                        : asset('assets/img/not-found/image.png') }}"
+                                                        title="{{ $data->nama_koleksi }}" class="glightbox preview-link">
+                                                        <i class="bi bi-arrows-angle-expand"></i>
+                                                    </a>
+
+                                                    <a href="/koleksi/{{ $data->id_koleksi }}" class="details-link">
+                                                        <i class="bi bi-link-45deg"></i>
+                                                    </a>
+                                                </div>
                                             </div>
+
+                                            <a href="/koleksi/{{ $data->id_koleksi }}" class="card-body">
+                                                {{ $data->nama_koleksi }}
+                                            </a>
                                         </div>
-                                        <div class="card-body">
-                                            {{ $data->nama_koleksi }}
-                                        </div>
-                                    </div>
+                                    @endfor
+
                                 </div>
-                            @endforeach
+                            @endfor
 
                         </div>
                     </div>
-                    <div class="col-lg-4">tes2</div>
+
+                    <!-- SAMPING KANAN -->
+                    <div class="col-lg-4">
+                        tes2
+                    </div>
+
                 </div>
             </div>
         </section>

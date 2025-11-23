@@ -129,26 +129,75 @@
                     <!-- SIDEBAR -->
                     <div class="col-lg-4">
 
-                        <div class="card border-0 shadow-sm rounded-4 p-4">
+                        <!-- SIDEBAR WRAPPER -->
+                        <div class="sticky-top" style="top: 90px;">
 
-                            <h5 class="fw-semibold mb-3">📰 Berita Lainnya</h5>
-
-                            @forelse ($beritaLainnya ?? [] as $item)
-                                <div class="mb-3 border-bottom pb-2">
-                                    <a href="/blog/{{ $item->slug }}" class="text-decoration-none">
-                                        <strong class="d-block">{{ Str::limit($item->judul, 50) }}</strong>
-                                    </a>
-                                    <small class="text-muted">
-                                        {{ $item->tanggal_publikasi ? \Carbon\Carbon::parse($item->tanggal_publikasi)->format('d M Y') : '' }}
-                                    </small>
+                            <!-- BERITA TERBARU -->
+                            <div class="card shadow-sm border-0 rounded-3 mb-4">
+                                <div class="card-header bg-white border-0 pb-0">
+                                    <h6 class="fw-bold mb-0 text-primary">
+                                        📰 Berita Terbaru
+                                    </h6>
+                                    <hr class="mt-2 mb-2">
                                 </div>
-                            @empty
-                                <p class="text-muted">Belum ada berita lainnya.</p>
-                            @endforelse
+                                <div class="card-body pt-2">
+
+                                    @forelse($beritaTerbaru as $berita)
+                                        <div class="d-flex mb-3 align-items-start">
+                                            <div class="me-2 flex-shrink-0">
+                                                <img src="{{ asset('storage/' . $berita->thumbnail) }}" alt="thumb"
+                                                    class="rounded" style="width:65px;height:60px;object-fit:cover;">
+                                            </div>
+                                            <div>
+                                                <a href="{{ route('berita.detail', $berita->slug) }}"
+                                                    class="fw-semibold d-block text-dark text-decoration-none"
+                                                    style="font-size: 14px;">
+                                                    {{ $berita->judul }}
+                                                </a>
+                                                <small class="text-muted">
+                                                    {{ $berita->created_at->format('d M Y') }}
+                                                </small>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <p class="text-muted text-center">Belum ada berita</p>
+                                    @endforelse
+
+                                </div>
+                            </div>
+
+                            <!-- KEGIATAN TERAKHIR -->
+                            {{-- <div class="card shadow-sm border-0 rounded-3">
+                                <div class="card-header bg-white border-0 pb-0">
+                                    <h6 class="fw-bold mb-0 text-success">
+                                        📅 Kegiatan Terakhir
+                                    </h6>
+                                    <hr class="mt-2 mb-2">
+                                </div>
+                                <div class="card-body pt-2">
+
+                                    @forelse($kegiatanTerakhir as $kegiatan)
+                                        <div class="mb-3">
+                                            <a href="{{ route('kegiatan.detail', $kegiatan->id_kegiatan) }}"
+                                                class="fw-semibold text-decoration-none text-dark d-block">
+                                                {{ $kegiatan->nama_kegiatan }}
+                                            </a>
+                                            <small class="text-muted d-flex align-items-center">
+                                                <i class="bi bi-calendar-event me-1"></i>
+                                                {{ \Carbon\Carbon::parse($kegiatan->tanggal_kegiatan)->format('d M Y') }}
+                                            </small>
+                                        </div>
+                                    @empty
+                                        <p class="text-muted text-center">Belum ada kegiatan</p>
+                                    @endforelse
+
+                                </div>
+                            </div> --}}
 
                         </div>
-
                     </div>
+
+
 
                 </div>
             </div>

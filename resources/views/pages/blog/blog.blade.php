@@ -26,9 +26,9 @@
                         <div class="col-lg-9">
                             @foreach ($berita as $data)
                                 <div class="col-lg-12 speaker-entry mb-2">
-                                    <div class="speaker-profile p-2 rounded-4">
+                                    <div class="speaker-profile p-1 border-0 rounded-4">
                                         <div class="row">
-                                            <div class="col-3">
+                                            <div class="col-md-2 col-3">
                                                 <div
                                                     style="width: 100%; aspect-ratio: 1/1; overflow: hidden; border-radius: 12px;">
                                                     <img src="{{ $data->thumbnail ? asset('storage/' . $data->thumbnail) : asset('assets/img/not-found/image.png') }}"
@@ -37,14 +37,14 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-9">
+                                            <div class="col-md-10 col-9">
                                                 <a href="/blog/{{ $data->slug }}">
                                                     <h4>{{ $data->judul }}</h4>
                                                 </a>
 
                                                 <div class="speaker-details mb-0">
                                                     {{-- konten singkat (biar tidak kepanjangan) --}}
-                                                    <p class="speaker-summary">
+                                                    <p class="speaker-summary mb-0">
                                                         {{ Str::limit(strip_tags($data->konten), 150, '...') }}
                                                     </p>
                                                     {{-- Jika mau: tanggal publish --}}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Kegiatan;
 use Illuminate\Http\Request;
 use App\Models\KomentarBerita;
 
@@ -26,7 +27,10 @@ class BeritaController extends Controller
 
         $berita->load('komentar');
 
-        return view('pages.blog.detail', compact('berita'));
+        $beritaTerbaru = Berita::orderBy('created_at', 'desc')->limit(5)->get();
+        $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')->limit(5)->get();
+
+        return view('pages.blog.detail', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));
     }
 
     public function storeKomentar(Request $request, $id)

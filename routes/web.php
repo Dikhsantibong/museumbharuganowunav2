@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/tentang-kami', [AboutController::class, 'tentangKami']);
 Route::get('/berita', [KegiatanController::class, 'berita']);
 Route::get('/blog', [BeritaController::class, 'blog']);
+Route::get('/blog/{slug}', [BeritaController::class, 'detail'])->name('berita.detail');
+Route::post('/blog/{id}/komentar', [BeritaController::class, 'storeKomentar'])->name('komentar.store');
+
 Route::get('/kontak', [ContactController::class, 'contact']);
 Route::get('/koleksi', [KoleksiController::class, 'koleksi']);
 Route::get('/koleksi/{id}', [App\Http\Controllers\KoleksiController::class, 'detailKoleksi'])->name('koleksi.detail');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use App\Models\KomentarBerita;
 
 class BeritaController extends Controller
 {
@@ -15,5 +16,34 @@ class BeritaController extends Controller
             ->get();
 
         return view('pages.blog.blog', compact('berita'));
+    }
+
+    public function detail($slug)
+    {
+        $berita = Berita::where('slug', $slug)
+            ->where('status', 'publish')
+            ->firstOrFail();
+
+        $berita->load('komentar');
+
+        return view('pages.blog.detail', compact('berita'));
+    }
+
+    public function storeKomentar(Request $request, $id)
+    {
+        $request->validate([
+            'nama' => 'required|string|max:100',
+            'email' => 'nullable|email|max:150',
+            'komentar' => 'required|string'
+        ]);
+
+        KomentarBerita::create([
+            'id_berita' => $id,
+            'nama' => $request->nama,
+            'email' => $request->email,
+            'komentar' => $request->komentar,
+        ]);
+
+        return back()->with('success', 'Komentar berhasil dikirim.');
     }
 }

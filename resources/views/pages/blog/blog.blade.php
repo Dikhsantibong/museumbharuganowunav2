@@ -25,8 +25,8 @@
                     <div class="row">
                         <div class="col-lg-9">
                             @foreach ($berita as $data)
-                                <div class="col-lg-12 speaker-entry">
-                                    <div class="speaker-profile rounded-5">
+                                <div class="col-lg-12 speaker-entry mb-2">
+                                    <div class="speaker-profile p-2 rounded-4">
                                         <div class="row">
                                             <div class="col-3">
                                                 <div
@@ -42,13 +42,13 @@
                                                     <h4>{{ $data->judul }}</h4>
                                                 </a>
 
-                                                <div class="speaker-details">
+                                                <div class="speaker-details mb-0">
                                                     {{-- konten singkat (biar tidak kepanjangan) --}}
                                                     <p class="speaker-summary">
                                                         {{ Str::limit(strip_tags($data->konten), 150, '...') }}
                                                     </p>
                                                     {{-- Jika mau: tanggal publish --}}
-                                                    <small class="text-muted">
+                                                    <small class="text-muted mb-0">
                                                         Dipublikasikan: {{ $data->tanggal_publikasi ?? '-' }}
                                                     </small>
                                                 </div>

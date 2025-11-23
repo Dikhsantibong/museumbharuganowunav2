@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BeritaResource\Pages;
 use App\Filament\Resources\BeritaResource\RelationManagers;
 use App\Models\Berita;
+use App\Models\KomentarBerita;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -35,8 +36,8 @@ class BeritaResource extends Resource
 
                     while (
                         \App\Models\Berita::where('slug', $slug)
-                            ->where('id_berita', '!=', $livewire->record?->id_berita) // biar ga konflik saat edit
-                            ->exists()
+                        ->where('id_berita', '!=', $livewire->record?->id_berita) // biar ga konflik saat edit
+                        ->exists()
                     ) {
                         $slug = $originalSlug . '-' . $counter;
                         $counter++;
@@ -77,6 +78,7 @@ class BeritaResource extends Resource
             Forms\Components\RichEditor::make('konten')
                 ->label('Isi Berita')
                 ->columnSpanFull(),
+
         ]);
     }
 
@@ -135,14 +137,12 @@ class BeritaResource extends Resource
                 ]),
             ]);
     }
-
     public static function getRelations(): array
     {
         return [
-            //
+            \App\Filament\Resources\BeritaResource\RelationManagers\KomentarBeritaRelationManager::class,
         ];
     }
-
     public static function getPages(): array
     {
         return [

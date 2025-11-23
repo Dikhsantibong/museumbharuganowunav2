@@ -19,90 +19,75 @@
         </div>
         <!-- End Page Title -->
 
-        <section class="section">
+        <section id="gallery" class="gallery venue-2 section">
             <div class="container">
-
-                <div class="row gy-4">
-
-                    <!-- BAGIAN KIRI GAMBAR -->
-                    <div class="col-lg-7">
-
+                <div class="row">
+                    <div class="col-lg-6">
                         @if ($koleksi->foto->count() > 0)
-                            <div class="row g-3">
-
-                                @foreach ($koleksi->foto as $foto)
-                                    <div class="col-6">
-                                        <div class="card">
-                                            <img src="{{ asset('storage/' . $foto->foto) }}" class="img-fluid rounded"
-                                                alt="Foto Koleksi">
-
-                                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                                <a href="{{ asset('storage/' . $foto->foto) }}"
-                                                    class="glightbox preview-link" title="{{ $koleksi->nama_koleksi }}">
-                                                    <i class="bi bi-arrows-angle-expand"></i>
-                                                </a>
-                                            </div>
+                            @foreach ($koleksi->foto as $foto)
+                                <div class="card rounded-4 mb-4">
+                                    <div class="gallery-item h-100 rounded-4">
+                                        <img src="{{ asset('storage/' . $foto->foto) }}" class="img-fluid" alt="">
+                                        <div class="gallery-links d-flex align-items-center justify-content-center">
+                                            <a href="{{ $foto->foto ? asset('storage/' . $foto->foto) : asset('assets/img/not-found/image.png') }}"
+                                                title="{{ $foto->sumber }}" class="glightbox preview-link">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </a>
                                         </div>
                                     </div>
-                                @endforeach
-
-                            </div>
+                                </div>
+                            @endforeach
                         @else
                             <img src="{{ asset('assets/img/not-found/image.png') }}" class="img-fluid rounded"
                                 alt="">
                         @endif
-
                     </div>
-                    <!-- END BAGIAN KIRI -->
-
-                    <!-- BAGIAN KANAN DETAIL -->
-                    <div class="col-lg-5">
-
-                        <div class="card p-4 rounded-4">
-                            <h3 class="mb-3">{{ $koleksi->nama_koleksi }}</h3>
-
-                            <table class="table table-borderless">
-                                <tr>
-                                    <th width="160">Tahun Pembuatan</th>
-                                    <td>{{ $koleksi->tahun_pembuatan ?? '-' }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Tempat Perolehan</th>
-                                    <td>{{ $koleksi->tempat_perolehan ?? '-' }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Tanggal Masuk</th>
-                                    <td>{{ $koleksi->tanggal_masuk ? date('d M Y', strtotime($koleksi->tanggal_masuk)) : '-' }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>Cara Perolehan</th>
-                                    <td>{{ $koleksi->cara_perolehan ?? '-' }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Jenis Koleksi</th>
-                                    <td>{{ $koleksi->jenis_koleksi ?? '-' }}</td>
-                                </tr>
+                    <div class="col-lg-6">
+                        <div class="venue-content">
+                            <h3>{{ $koleksi->nama_koleksi }}</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="pb-3" style="width: 5cm">Tahun Pembuatan</td>
+                                        <td class="pb-3" style="width: 0.4cm">:</td>
+                                        <td class="pb-3">{{ $koleksi->tahun_pembuatan ?? '-' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-3">Tempat Perolehan</td>
+                                        <td class="pb-3">:</td>
+                                        <td class="pb-3">{{ $koleksi->tempat_perolehan ?? '-' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-3">Tanggal Masuk</td>
+                                        <td class="pb-3">:</td>
+                                        <td class="pb-3">
+                                            {{ $koleksi->tanggal_masuk ? date('d M Y', strtotime($koleksi->tanggal_masuk)) : '-' }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-3">Cara Perolehan</td>
+                                        <td class="pb-3">:</td>
+                                        <td class="pb-3">{{ $koleksi->cara_perolehan ?? '-' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-3">Jenis Koleksi</td>
+                                        <td class="pb-3">:</td>
+                                        <td class="pb-3">{{ $koleksi->jenis_koleksi ?? '-' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-3">Uraian</td>
+                                        <td class="pb-3">:</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="pb-3" colspan="3">
+                                            {!! nl2br(e($koleksi->uraian)) !!}
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
-
-                    </div>
-                    <!-- END BAGIAN KANAN -->
-
-                </div>
-
-                <!-- URAIAN -->
-                <div class="row mt-5">
-                    <div class="col-lg-12">
-                        <div class="card p-4 rounded-4">
-                            <h4>Uraian Koleksi</h4>
-                            <p class="mt-2">
-                                {!! nl2br(e($koleksi->uraian)) !!}
-                            </p>
-                        </div>
                     </div>
                 </div>
-
             </div>
         </section>
 

@@ -26,8 +26,23 @@ class BeritaResource extends Resource
                 ->label('Judul')
                 ->required()
                 ->live(onBlur: true)
-                ->afterStateUpdated(function ($state, callable $set) {
-                    $set('slug', \Str::slug($state));
+                ->afterStateUpdated(function ($state, callable $set, $livewire) {
+                    $slug = \Str::slug($state);
+
+                    // Cek apakah slug sudah ada
+                    $originalSlug = $slug;
+                    $counter = 1;
+
+                    while (
+                        \App\Models\Berita::where('slug', $slug)
+                            ->where('id_berita', '!=', $livewire->record?->id_berita) // biar ga konflik saat edit
+                            ->exists()
+                    ) {
+                        $slug = $originalSlug . '-' . $counter;
+                        $counter++;
+                    }
+
+                    $set('slug', $slug);
                 }),
 
             Forms\Components\TextInput::make('slug')
@@ -45,7 +60,7 @@ class BeritaResource extends Resource
             Forms\Components\Select::make('status')
                 ->label('Status Berita')
                 ->options([
-                    'draft'   => 'Draft',
+                    'draft' => 'Draft',
                     'publish' => 'Publish',
                 ])
                 ->default('draft')

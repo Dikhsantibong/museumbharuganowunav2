@@ -46,7 +46,7 @@ class KoleksiResource extends Resource
                         TextInput::make('tahun_pembuatan')
                             ->label('Tahun Pembuatan')
                             ->numeric()
-                            ->minValue(1000)
+                            // ->minValue(1000)
                             ->maxValue(date('Y'))
                             ->nullable(),
 

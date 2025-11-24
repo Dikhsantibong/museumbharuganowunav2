@@ -27,7 +27,7 @@ class BeritaController extends Controller
 
         $berita->load('komentar');
 
-        $beritaTerbaru = Berita::orderBy('created_at', 'desc')->limit(5)->get();
+        $beritaTerbaru = Berita::orderBy('created_at', 'desc')->where('status', 'publish')->limit(5)->get();
         $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')->limit(5)->get();
 
         return view('pages.blog.detail', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));

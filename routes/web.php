@@ -23,7 +23,7 @@ Route::post('/blog/{id}/komentar', [BeritaController::class, 'storeKomentar'])->
 Route::get('/kontak', [ContactController::class, 'contact']);
 Route::get('/koleksi', [KoleksiController::class, 'koleksi']);
 Route::get('/koleksi/{id}', [App\Http\Controllers\KoleksiController::class, 'detailKoleksi'])->name('koleksi.detail');
-Route::get('/galery', [GaleryController::class, 'galery']);
+Route::get('/galeri', [GaleryController::class, 'galery']);
 Route::get('/kuis-museum', [QuisController::class, 'kuis']);
 
 Route::get('/virtual-tour', function () {

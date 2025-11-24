@@ -70,6 +70,34 @@
             </div>
         </section><!-- /Hero Section -->
 
+        <section id="sponsors" class="sponsors section">
+
+            <div class="container">
+
+                <div class="row g-0 clients-wrap">
+
+                    <div class="col-xl-3 col-md-4 client-logo">
+                        <img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-3 col-md-4 client-logo">
+                        <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-3 col-md-4 client-logo">
+                        <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-3 col-md-4 client-logo">
+                        <img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                </div>
+
+            </div>
+
+        </section>
+
         <!-- Intro Section -->
         <section id="intro" class="intro section">
 

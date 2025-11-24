@@ -1,33 +1,123 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="content-section" data-background="#fffbf7">
-    <div class="container">
-        <div class="row justify-content-left mb-5">
-            <div class="col-lg-8">
-                <div class="text-box">
-                    <h5>GALERI KEGIATAN</h5>
-                </div>
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" style="background-image: url(assets/img/events/showcase-9.webp);">
+            <div class="container position-relative">
+                <h1>Gallery</h1>
+                <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
+                    molestias.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Gallery</li>
+                    </ol>
+                </nav>
             </div>
-        </div>
-        @if(isset($galeri) && count($galeri))
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-            @foreach($galeri as $foto)
-                <div class="col">
-                    <div class="card image-box h-100 shadow-sm" style="overflow:hidden;">
-                        <img src="{{ asset('storage/' . $foto->foto) }}" style="width:100%; height:210px; object-fit:cover; background:#eee;" alt="{{ $foto->caption ?? 'Galeri Museum' }}">
-                        @if($foto->caption)
-                        <div class="card-body py-2 px-2">
-                            <div class="small text-muted">{{ $foto->caption }}</div>
+        </div><!-- End Page Title -->
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery section">
+
+            <div class="container-fluid">
+
+                <div class="row gy-4 justify-content-center">
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-1.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-1.webp" title="Gallery 1"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
                         </div>
-                        @endif
-                    </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-2.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-2.webp" title="Gallery 2"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-3.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-3.webp" title="Gallery 3"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-4.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-4.webp" title="Gallery 4"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-5.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-5.webp" title="Gallery 5"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-6.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-6.webp" title="Gallery 6"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-7.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-7.webp" title="Gallery 7"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="gallery-item h-100">
+                            <img src="assets/img/events/gallery-8.webp" class="img-fluid" alt="">
+                            <div class="gallery-links d-flex align-items-center justify-content-center">
+                                <a href="assets/img/events/gallery-8.webp" title="Gallery 8"
+                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Gallery Item -->
+
                 </div>
-            @endforeach
-        </div>
-        @else
-            <div class="row"><div class="col-12 text-center text-muted">Belum ada foto kegiatan.</div></div>
-        @endif
-    </div>
-</section>
+
+            </div>
+
+        </section><!-- /Gallery Section -->
+
+    </main>
 @endsection

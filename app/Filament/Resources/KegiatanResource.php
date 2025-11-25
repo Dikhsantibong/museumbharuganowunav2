@@ -24,10 +24,24 @@ class KegiatanResource extends Resource
                 Forms\Components\TextInput::make('judul')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(
-                        fn($state, callable $set) =>
-                        $set('slug', \Str::slug($state))
-                    ),
+                    ->afterStateUpdated(function ($state, callable $set, $livewire) {
+                        $slug = \Str::slug($state);
+
+                        // Cek apakah slug sudah ada
+                        $originalSlug = $slug;
+                        $counter = 1;
+
+                        while (
+                            \App\Models\Kegiatan::where('slug', $slug)
+                                ->where('id_kegiatan', '!=', $livewire->record?->id_kegiatan) // biar ga konflik saat edit
+                                ->exists()
+                        ) {
+                            $slug = $originalSlug . '-' . $counter;
+                            $counter++;
+                        }
+
+                        $set('slug', $slug);
+                    }),
 
                 Forms\Components\TextInput::make('slug')
                     ->required()
@@ -112,8 +126,8 @@ class KegiatanResource extends Resource
                     ->icon(
                         fn($state) =>
                         $state === 'Publish'
-                            ? 'heroicon-o-check-circle'
-                            : 'heroicon-o-x-circle'
+                        ? 'heroicon-o-check-circle'
+                        : 'heroicon-o-x-circle'
                     )
                     ->color(
                         fn($state) =>

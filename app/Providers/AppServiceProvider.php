@@ -29,7 +29,8 @@ class AppServiceProvider extends ServiceProvider
                 ->limit(5)
                 ->get();
 
-            $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')
+            $kegiatanTerakhir = Kegiatan::where('status', 'Publish')
+                ->orderBy('created_at', 'desc')
                 ->limit(5)
                 ->get();
 

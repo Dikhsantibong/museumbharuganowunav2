@@ -252,174 +252,47 @@
                 <h2 class="section-title">Berita Terbaru Museum</h2>
             </div>
             <div class="row row-cards">
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
+                @forelse($beritaTerbaru as $data)
+                    <div class="col-md col-12">
+                        <div class="card bg-transparent border-0">
+                            <!-- Photo -->
+                            <a href="{{ route('berita.show', $data->slug) }}"
+                                class="img-responsive img-responsive-21x9 rounded-3"
+                                style="background-image: url({{ asset('storage/' . $data->thumbnail) }})">
                             </a>
+                            <div class="card-body px-0 ">
+                                <a href="{{ route('berita.show', $data->slug) }}" class="text-dark">
+                                    {{ Str::limit(strip_tags($data->judul), 150, '...') }}
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                    <p class="text-muted text-center">Belum ada berita</p>
+                @endforelse
             </div>
-
         </div>
         <div class="container mt-4">
             <div class="section-header text-start mx-0 mb-4">
                 <h2 class="section-title">Kegiatan Terbaru Museum</h2>
             </div>
             <div class="row row-cards">
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
+                @forelse($koleksiTerbaru as $data)
+                    <div class="col-md col-12">
+                        <a href="/koleksi/{{ $data->id_koleksi }}" class="card card-link mx-0 mb-3">
+                            <div class="ribbon bg-warning-lt">{{ $data->jenis_koleksi }}</div>
+                            <!-- Photo -->
+                            <div class="img-responsive img-responsive-21x9 rounded-3"
+                                style="background-image: url({{ $data->foto->first() ? asset('storage/' . $data->foto->first()->foto) : asset('img/image.png') }})">
+                            </div>
+                            <a href="/koleksi/{{ $data->id_koleksi }}" class="text-dark">
+                                {{ $data->nama_koleksi }}
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
                         </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Berita 1 -->
-                <div class="col-md col-12">
-                    <div class="card bg-transparent border-0">
-                        <!-- Photo -->
-                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
-                            style="background-image: url({{ asset('img/image.png') }})">
-                        </a>
-                        <div class="card-body px-0 ">
-                            <a href="#" class="text-dark">
-                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
-                                lokal
-                                Muna.
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                    <p class="text-muted text-center">Belum ada koleksi</p>
+                @endforelse
             </div>
         </div>
     </section>

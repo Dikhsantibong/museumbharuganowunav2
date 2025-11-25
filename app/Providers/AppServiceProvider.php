@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Berita;
+use App\Models\Koleksi;
 use App\Models\Kegiatan;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -32,9 +33,14 @@ class AppServiceProvider extends ServiceProvider
                 ->limit(5)
                 ->get();
 
+            $koleksiTerbaru = Koleksi::orderBy('tanggal_masuk', 'desc')
+                ->limit(5)
+                ->get();
+
             $view->with([
                 'beritaTerbaru' => $beritaTerbaru,
                 'kegiatanTerakhir' => $kegiatanTerakhir,
+                'koleksiTerbaru' => $koleksiTerbaru,
             ]);
         });
     }

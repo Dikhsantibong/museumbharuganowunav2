@@ -274,7 +274,7 @@
         </div>
         <div class="container mt-4">
             <div class="section-header text-start mx-0 mb-4">
-                <h2 class="section-title">Berita Terbaru Museum</h2>
+                <h2 class="section-title">Kegiatan Museum</h2>
             </div>
             <div class="row row-cards">
                 @forelse($kegiatanTerakhir as $data)

@@ -103,9 +103,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    tes
-                </div>
+                @include('components.side-content')
             </div>
         </div>
     </section>

@@ -20,10 +20,7 @@ class BeritaController extends Controller
             ->latest()
             ->get();
 
-        $beritaTerbaru = Berita::orderBy('created_at', 'desc')->where('status', 'publish')->limit(5)->get();
-        $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')->limit(5)->get();
-
-        return view('pages.berita.index', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));
+        return view('pages.berita.index', compact('berita'));
     }
 
     public function show($slug)
@@ -34,10 +31,8 @@ class BeritaController extends Controller
 
         $berita->load('komentar');
 
-        $beritaTerbaru = Berita::orderBy('created_at', 'desc')->where('status', 'publish')->limit(5)->get();
-        $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')->limit(5)->get();
 
-        return view('pages.berita.detail', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));
+        return view('pages.berita.detail', compact('berita'));
     }
 
     public function storeKomentar(Request $request, $id)

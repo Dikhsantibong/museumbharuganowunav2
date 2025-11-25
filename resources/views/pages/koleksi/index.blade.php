@@ -41,7 +41,6 @@
                         <style>
                             .search-result {
                                 display: inline-block;
-                                /* Biar width mengikuti isi */
                                 background: #fff;
                             }
                         </style>
@@ -69,7 +68,7 @@
                             $rows = ceil($total / $columns);
                         @endphp
 
-                        <div class="row g-3 justify-content-center">
+                        <div class="row g-2 justify-content-center">
 
                             @for ($col = 0; $col < $columns; $col++)
                                 <div class="col-lg-4 col-md-4">
@@ -82,45 +81,21 @@
                                             }
                                             $data = $koleksi[$index];
                                         @endphp
-
-                                        <div class="card mb-4">
-                                            <div class="gallery-item h-100">
-                                                <img src="{{ $data->foto->first()
-                                                    ? asset('storage/' . $data->foto->first()->foto)
-                                                    : asset('assets/img/not-found/image.png') }}"
-                                                    class="img-fluid" alt="">
-
-                                                <div class="gallery-links d-flex align-items-center justify-content-center">
-                                                    <a href="{{ $data->foto->first()
-                                                        ? asset('storage/' . $data->foto->first()->foto)
-                                                        : asset('assets/img/not-found/image.png') }}"
-                                                        title="{{ $data->nama_koleksi }}" class="glightbox preview-link">
-                                                        <i class="bi bi-arrows-angle-expand"></i>
-                                                    </a>
-
-                                                    <a href="/koleksi/{{ $data->id_koleksi }}" class="details-link">
-                                                        <i class="bi bi-link-45deg"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <a href="/koleksi/{{ $data->id_koleksi }}" class="card-body">
-                                                {{ $data->nama_koleksi }}
+                                        <div class="card mb-2">
+                                            <span class="ribbon bg-yellow-lt">{{ $data->jenis_koleksi }}</span>
+                                            <a href="/koleksi/{{ $data->id_koleksi }}" class="d-block"><img
+                                                    src="{{ $data->foto->first() ? asset('storage/' . $data->foto->first()->foto) : asset('img/image.png') }}"
+                                                    class="card-img-top border-bottom rounded-top-3"></a>
+                                            <a href="/koleksi/{{ $data->id_koleksi }}" class="card-body p-2 px-3">
+                                                <div class="fs-4">{{ $data->nama_koleksi }}</div>
                                             </a>
                                         </div>
                                     @endfor
-
                                 </div>
                             @endfor
-
                         </div>
                     </div>
-
-                    <!-- SAMPING KANAN -->
-                    <div class="col-lg-4">
-                        tes2
-                    </div>
-
+                    @include('components.side-content')
                 </div>
             </div>
         </section>

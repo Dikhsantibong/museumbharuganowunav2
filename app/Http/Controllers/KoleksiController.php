@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Koleksi;
 use App\Models\Berita;
+use App\Models\Koleksi;
+use App\Models\Kegiatan;
+use Illuminate\Http\Request;
 
 class KoleksiController extends Controller
 {
@@ -23,8 +24,8 @@ class KoleksiController extends Controller
         }
 
         $koleksi = $query->get();
-        $berita_populer = Berita::withCount('komentar')->orderByDesc('komentar_count')->take(4)->get();
-        return view('pages.koleksi.index', compact('koleksi', 'berita_populer'));
+
+        return view('pages.koleksi.index', compact('koleksi'));
     }
 
     public function show($id)

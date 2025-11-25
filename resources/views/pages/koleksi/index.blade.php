@@ -94,6 +94,40 @@
                                 </div>
                             @endfor
                         </div>
+                        @if ($koleksi->lastPage() > 1)
+                            <hr class="my-3">
+                            <div class="d-flex justify-content-center">
+                                <ul class="pagination">
+
+                                    {{-- PREVIOUS --}}
+                                    <li class="page-item {{ $koleksi->onFirstPage() ? 'disabled' : '' }}">
+                                        <a class="page-link" href="{{ $koleksi->previousPageUrl() }}">&lt;</a>
+                                    </li>
+
+                                    @php
+                                        $currentPage = $koleksi->currentPage();
+                                        $lastPage = $koleksi->lastPage();
+
+                                        $start = max(1, $currentPage - 2);
+                                        $end = min($lastPage, $currentPage + 2);
+                                    @endphp
+
+                                    @for ($page = $start; $page <= $end; $page++)
+                                        <li class="page-item {{ $currentPage == $page ? 'active' : '' }}">
+                                            <a class="page-link" href="{{ $koleksi->url($page) }}">
+                                                {{ $page }}
+                                            </a>
+                                        </li>
+                                    @endfor
+
+                                    {{-- NEXT --}}
+                                    <li class="page-item {{ $koleksi->hasMorePages() ? '' : 'disabled' }}">
+                                        <a class="page-link" href="{{ $koleksi->nextPageUrl() }}">&gt;</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        @endif
                     </div>
                     @include('components.side-content')
                 </div>

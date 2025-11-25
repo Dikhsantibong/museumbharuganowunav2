@@ -11,24 +11,24 @@
         }
     </style>
     <header class="img-bg"
-        style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/img/hero.png') center/cover no-repeat; margin-top: -80px;">
+        style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/img/hero2.png') center/cover no-repeat; margin-top: -80px;">
         <div class="hero position-relative py-12 pb-9">
             <div class="container text-center">
 
                 <h1 class="hero-title text-yellow mb-3" style="font-size: 3rem; font-weight: 700;">
-                    Berita Terbaru
+                    Kegiatan Museum
                 </h1>
 
                 <p class="hero-description text-white text-opacity-75 mb-5" style="max-width: 700px; margin: auto;">
-                    Update informasi terkini seputar Museum Bharugano Wuna, kegiatan budaya, event, dan informasi penting
-                    lainnya.
+                    Informasi berbagai kegiatan, event budaya, pameran, workshop, serta program edukatif yang
+                    diselenggarakan oleh Museum Bharugano Wuna.
                 </p>
                 <!-- Search Bar (opsional) -->
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-8">
-                        <form class="row g-3 justify-content-center" method="GET" action="{{ route('berita.index') }}">
+                        <form class="row g-3 justify-content-center" method="GET" action="{{ route('kegiatan.index') }}">
                             <div class="col-9">
-                                <input type="text" name="search" placeholder="Cari berita..."
+                                <input type="text" name="search" placeholder="Cari kegiatan..."
                                     value="{{ request('search') }}" class="form-control form-control-solid">
                             </div>
                             <div class="col-3">
@@ -42,7 +42,6 @@
     </header>
     <section class="section py-5">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-8">
                     @if (request('search'))
@@ -56,7 +55,7 @@
                         <div class="mb-4">
                             <div class="search-result border rounded-3 px-3 py-2 text-muted">
                                 Hasil Pencarian : {{ request('search') }}
-                                <a href="/berita" class="ms-3 align-items-center text-muted">
+                                <a href="/kegiatan" class="ms-3 align-items-center text-muted">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" class="icon m-1">
@@ -69,8 +68,8 @@
 
                         </div>
                     @endif
-                    @foreach ($berita as $data)
-                        <a href="/berita/{{ $data->slug }}" class="berita-link text-dark border-0 rounded-3">
+                    @foreach ($kegiatan as $data)
+                        <a href="/kegiatan/{{ $data->slug }}" class="berita-link text-dark border-0 rounded-3">
                             <div class="row mb-3">
                                 <div class="col-md-2 col-3">
                                     <div class="border"
@@ -86,29 +85,30 @@
                                     <div class="d-flex">
                                         <small class="text-muted small mb-0">
                                             <b class="text-dark">Admin</b> |
-                                            {{ $data->tanggal_publikasi ? \Carbon\Carbon::parse($data->tanggal_publikasi)->translatedFormat('d F Y') : '-' }}
+                                            {{ $data->tanggal_mulai ? $data->tanggal_mulai : '-' }}
+                                            {{ $data->tanggal_mulai ? ' - ' . $data->tanggal_mulai : '' }}
                                         </small>
                                     </div>
                                     <small class="text-muted mb-0">
-                                        {{ Str::limit(strip_tags($data->konten), 150, '...') }}
+                                        {{ Str::limit(strip_tags($data->deskripsi), 150, '...') }}
                                     </small>
                                 </div>
                             </div>
                         </a>
                     @endforeach
-                    @if ($berita->lastPage() > 1)
+                    @if ($kegiatan->lastPage() > 1)
                         <hr class="my-3">
                         <div class="d-flex justify-content-center">
                             <ul class="pagination">
 
                                 {{-- PREVIOUS --}}
-                                <li class="page-item {{ $berita->onFirstPage() ? 'disabled' : '' }}">
-                                    <a class="page-link" href="{{ $berita->previousPageUrl() }}">&lt;</a>
+                                <li class="page-item {{ $kegiatan->onFirstPage() ? 'disabled' : '' }}">
+                                    <a class="page-link" href="{{ $kegiatan->previousPageUrl() }}">&lt;</a>
                                 </li>
 
                                 @php
-                                    $currentPage = $berita->currentPage();
-                                    $lastPage = $berita->lastPage();
+                                    $currentPage = $kegiatan->currentPage();
+                                    $lastPage = $kegiatan->lastPage();
 
                                     $start = max(1, $currentPage - 2);
                                     $end = min($lastPage, $currentPage + 2);
@@ -116,16 +116,17 @@
 
                                 @for ($page = $start; $page <= $end; $page++)
                                     <li class="page-item {{ $currentPage == $page ? 'active' : '' }}">
-                                        <a class="page-link" href="{{ $berita->url($page) }}">
+                                        <a class="page-link" href="{{ $kegiatan->url($page) }}">
                                             {{ $page }}
                                         </a>
                                     </li>
                                 @endfor
 
                                 {{-- NEXT --}}
-                                <li class="page-item {{ $berita->hasMorePages() ? '' : 'disabled' }}">
-                                    <a class="page-link" href="{{ $berita->nextPageUrl() }}">&gt;</a>
+                                <li class="page-item {{ $kegiatan->hasMorePages() ? '' : 'disabled' }}">
+                                    <a class="page-link" href="{{ $kegiatan->nextPageUrl() }}">&gt;</a>
                                 </li>
+
                             </ul>
                         </div>
                     @endif

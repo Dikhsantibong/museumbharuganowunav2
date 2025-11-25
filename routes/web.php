@@ -19,6 +19,9 @@ Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
 Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita.show');
 Route::post('/berita/{id}/komentar', [BeritaController::class, 'storeKomentar'])->name('komentar.store');
 
+Route::get('/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan.index');
+Route::get('/kegiatan/{slug}', [KegiatanController::class, 'show'])->name('kegiatan.show');
+
 Route::get('/koleksi', [KoleksiController::class, 'index'])->name('koleksi.index');
 Route::get('/koleksi/{id}', [KoleksiController::class, 'show'])->name('koleksi.show');
 Route::get('/kontak', [ContactController::class, 'contact']);

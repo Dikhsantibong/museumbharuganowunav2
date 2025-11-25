@@ -15,10 +15,9 @@ Route::get('/', function () {
 
 
 Route::get('/tentang-kami', [AboutController::class, 'tentangKami']);
-Route::get('/berita', [KegiatanController::class, 'berita']);
-Route::get('/blog', [BeritaController::class, 'blog']);
-Route::get('/blog/{slug}', [BeritaController::class, 'detail'])->name('berita.detail');
-Route::post('/blog/{id}/komentar', [BeritaController::class, 'storeKomentar'])->name('komentar.store');
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
+Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita.show');
+Route::post('/berita/{id}/komentar', [BeritaController::class, 'storeKomentar'])->name('komentar.store');
 
 Route::get('/kontak', [ContactController::class, 'contact']);
 Route::get('/koleksi', [KoleksiController::class, 'koleksi']);

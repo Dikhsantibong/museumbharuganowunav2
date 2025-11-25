@@ -9,17 +9,21 @@ use App\Models\KomentarBerita;
 
 class BeritaController extends Controller
 {
-    public function blog()
+    public function index(Request $request)
     {
         $berita = Berita::with('komentar')
             ->where('status', 'publish')
+            ->when($request->search, function ($query) use ($request) {
+                $query->where('judul', 'like', '%' . $request->search . '%')
+                    ->orWhere('konten', 'like', '%' . $request->search . '%');
+            })
             ->latest()
             ->get();
 
-        return view('pages.blog.blog', compact('berita'));
+        return view('pages.berita.index', compact('berita'));
     }
 
-    public function detail($slug)
+    public function show($slug)
     {
         $berita = Berita::where('slug', $slug)
             ->where('status', 'publish')
@@ -30,7 +34,7 @@ class BeritaController extends Controller
         $beritaTerbaru = Berita::orderBy('created_at', 'desc')->where('status', 'publish')->limit(5)->get();
         $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')->limit(5)->get();
 
-        return view('pages.blog.detail', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));
+        return view('pages.berita.detail', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));
     }
 
     public function storeKomentar(Request $request, $id)
@@ -41,6 +45,8 @@ class BeritaController extends Controller
             'komentar' => 'required|string'
         ]);
 
+        $berita = Berita::findOrFail($id);
+
         KomentarBerita::create([
             'id_berita' => $id,
             'nama' => $request->nama,
@@ -48,6 +54,8 @@ class BeritaController extends Controller
             'komentar' => $request->komentar,
         ]);
 
-        return back()->with('success', 'Komentar berhasil dikirim.');
+        return redirect()->to(route('berita.show', $berita->slug) . '#komentar')
+            ->with('success', 'Komentar berhasil dikirim.');
+
     }
 }

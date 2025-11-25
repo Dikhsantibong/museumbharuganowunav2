@@ -1,55 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Evently Bootstrap Template</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Museum Bharugano Wuna</title>
+    <!-- CSS files -->
+    <link href="{{ asset('dist/css/tabler.min.css') }}" rel="stylesheet" />
+    {{-- <link href="{{ asset('dist/css/tabler-flags.min.css') }}" rel="stylesheet" /> --}}
+    {{-- <link href="{{ asset('dist/css/tabler-socials.min.css') }}" rel="stylesheet" /> --}}
+    {{-- <link href="{{ asset('dist/css/tabler-payments.min.css') }}" rel="stylesheet" /> --}}
+    <link href="{{ asset('dist/css/tabler-vendors.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('dist/css/tabler-marketing.min.css') }}" rel="stylesheet" />
+    {{-- <link href="{{ asset('dist/css/demo.min.css') }}" rel="stylesheet" /> --}}
+    <style>
+        @import url('https://rsms.me/inter/inter.css');
 
-    <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+        /* Navbar saat transparan (awal) */
+        .navbar-transparent .navbar-brand,
+        .navbar-transparent .navbar-nav .nav-link {
+            color: white !important;
+            transition: color 0.3s ease;
+        }
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        /* Navbar saat discroll */
+        .navbar-scroll .navbar-brand,
+        .navbar-scroll .navbar-nav .nav-link {
+            color: #222 !important;
+            /* warna dark */
+        }
 
-    <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-
-    <!-- Main CSS File -->
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-
+        /* Tambahkan shadow dan background putih */
+        .navbar-scroll {
+            background: white !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
-<body class="index-page">
-    @include('components.navbar')
-    @yield('content')
-    @include('components.footer')
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+<body class=" body-marketing body-gradient">
+    <script src="{{ asset('dist/js/demo-theme.min.js') }}"></script>
+    <div class="page bg-white">
+        @include('components.alert.error')
+        @include('components.alert.success')
+        @include('components.navbar')
+        @yield('content')
+        @include('components.footer')
+    </div>
+    <!-- Libs JS -->
+    <script src="{{ asset('dist/libs/typed.js/dist/typed.umd.js') }}" defer></script>
+    <!-- Tabler Core -->
+    <script src="{{ asset('dist/js/tabler.min.js') }}" defer></script>
+    <script src="{{ asset('dist/js/demo.min.js') }}" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toast = document.getElementById("toast-simple");
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+            if (toast) {
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                    toast.classList.add("hide");
+                }, 3000); // 5 detik
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
 
-    <!-- Vendor JS Files -->
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-
-    <!-- Main JS File -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-scroll");
+                navbar.classList.remove("navbar-transparent");
+            } else {
+                navbar.classList.add("navbar-transparent");
+                navbar.classList.remove("navbar-scroll");
+            }
+        });
+    </script>
 
 </body>
 

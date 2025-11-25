@@ -1,10 +1,17 @@
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <h1 class="sitename">Bharugano Wuna</h1>
+<header class="navbar navbar-expand-lg navbar-transparent sticky-top py-2">
+    <div class="container">
+        <a href="/" class="navbar-brand navbar-brand-autodark">
+            <img src="https://sipengadu.eng.uho.ac.id/logo/image.png" class="navbar-brand-image" alt="">
+            Museum Bharugano Wuna
         </a>
-        @include('components.nav-menu')
-        <a class="btn-getstarted" href="buy-tickets.html">Buy Tickets</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <nav class="navbar-nav ms-auto">
+                @include('components.nav-menu')
+            </nav>
+        </div>
     </div>
 </header>

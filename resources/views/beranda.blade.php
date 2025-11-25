@@ -1,1422 +1,425 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="main">
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
-            <div class="background-overlay"></div>
-            <div class="hero-content">
-                <div class="container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-lg-10">
-                            <div class="hero-text">
-                                <h1 class="hero-title">Museum Bharugano Wuna</h1>
-                                <p class="hero-subtitle">Menyajikan perjalanan sejarah dan kebudayaan Muna melalui
-                                    koleksi, arsip, dan ruang pamer yang autentik serta penuh nilai historis.
-                                    {{-- <div class="event-details">
-                                    <div class="detail-item">
-                                        <i class="bi bi-calendar-event"></i>
-                                        <span>March 15-17, 2026</span>
-                                    </div>
-                                    <div class="detail-item">
-                                        <i class="bi bi-geo-alt"></i>
-                                        <span>Grand Palace Hotel, New York</span>
-                                    </div>
-                                </div> --}}
-                            </div>
-                            {{-- <div class="countdown-section">
-                                <h3 class="countdown-label">Event Starts In</h3>
-                                <div class="countdown d-flex justify-content-center" data-count="2026/03/15">
-                                    <div>
-                                        <h3 class="count-days">239</h3>
-                                        <h4>Days</h4>
-                                    </div>
-                                    <div>
-                                        <h3 class="count-hours">8</h3>
-                                        <h4>Hours</h4>
-                                    </div>
-                                    <div>
-                                        <h3 class="count-minutes">53</h3>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div>
-                                        <h3 class="count-seconds">23</h3>
-                                        <h4>Seconds</h4>
-                                    </div>
-                                </div>
-                            </div> --}}
-                            <div class="cta-section">
-                                <div class="cta-buttons">
-                                    <a href="tickets.html" class="btn btn-primary btn-cta">Secure Your Seat</a>
-                                    <a href="speakers.html" class="btn btn-secondary btn-cta">View Speakers</a>
-                                </div>
-                                <p class="cta-note">Limited to 200 executive participants • Early bird pricing ends
-                                    January 31st</p>
-                            </div>
-                        </div><!-- End col-lg-10 -->
-                    </div><!-- End row -->
-                    {{-- <div class="sponsors-section">
-                        <p class="sponsors-label">Proudly supported by industry leaders</p>
-                        <div class="sponsors-logos">
-                            <img src="assets/img/clients/clients-1.webp" alt="Partner Logo" class="sponsor-logo">
-                            <img src="assets/img/clients/clients-3.webp" alt="Partner Logo" class="sponsor-logo">
-                            <img src="assets/img/clients/clients-5.webp" alt="Partner Logo" class="sponsor-logo">
-                            <img src="assets/img/clients/clients-7.webp" alt="Partner Logo" class="sponsor-logo">
-                            <img src="assets/img/clients/clients-9.webp" alt="Partner Logo" class="sponsor-logo">
-                            <img src="assets/img/clients/clients-11.webp" alt="Partner Logo" class="sponsor-logo">
-                        </div>
-                    </div><!-- End sponsors-section --> --}}
-                </div><!-- End container -->
-            </div>
-        </section><!-- /Hero Section -->
-
-        <section id="sponsors" class="sponsors section">
-
-            <div class="container">
-
-                <div class="row g-0 clients-wrap">
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Intro Section -->
-        <section id="intro" class="intro section">
-
-            <div class="container">
-
-                <div class="row g-4">
-
-                    <div class="col-lg-6">
-                        <div class="content">
-                            <h2>The Definitive Tech Innovation Summit</h2>
-                            <p class="lead">Morbi auctor ipsum vel leo cursus, ac tempor augue tempus. Vestibulum
-                                ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla
-                                facilisi. Fusce vitae magna non nulla vulputate tincidunt.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et
-                                dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-                                Maecenas nisl est, ultrices nec congue eget, auctor vitae massa.</p>
-
-                            <div class="stats-grid">
-                                <div class="stat-item">
-                                    <div class="stat-number">3</div>
-                                    <div class="stat-label">Days</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">8</div>
-                                    <div class="stat-label">Tracks</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">150+</div>
-                                    <div class="stat-label">Speakers</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-number">3500+</div>
-                                    <div class="stat-label">Attendees</div>
-                                </div>
-                            </div>
-
-                            <div class="cta-section">
-                                <a href="#" class="btn btn-primary">View Full Agenda</a>
-                                <a href="#" class="btn btn-outline">Meet the Speakers</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="visual-section">
-                            <div class="image-wrapper">
-                                <img src="assets/img/events/showcase-5.webp" alt="Tech Summit" class="img-fluid">
-                                <div class="gradient-overlay"></div>
-                                <div class="floating-badge">
-                                    <i class="bi bi-calendar-event"></i>
-                                    <span>March 15-17, 2026</span>
-                                </div>
-                            </div>
-
-                            <div class="highlight-cards">
-                                <div class="highlight-card">
-                                    <i class="bi bi-people-fill"></i>
-                                    <h4>Global Networking</h4>
-                                    <p>Connect with industry leaders from 60+ countries</p>
-                                </div>
-                                <div class="highlight-card">
-                                    <i class="bi bi-lightbulb-fill"></i>
-                                    <h4>Innovation Showcase</h4>
-                                    <p>Discover cutting-edge technologies and startups</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="founder-quote">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 text-center">
-                            <img src="assets/img/person/person-m-8.webp" alt="Sarah Johnson" class="founder-img">
-                        </div>
-                        <div class="col-lg-9">
-                            <blockquote>
-                                <p>"Our mission has always been to bridge the gap between visionary ideas and practical
-                                    implementation. This summit represents the culmination of years of bringing together
-                                    the brightest minds in technology."</p>
-                                <cite>
-                                    <strong>Sarah Johnson</strong>
-                                    <span>Founder &amp; Event Director</span>
-                                </cite>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section><!-- /Intro Section -->
-
-        <!-- Featured Speakers Section -->
-        <section id="featured-speakers" class="featured-speakers section">
-
-            <!-- Section Title -->
-            <div class="container section-title">
-                <h2>Featured Speakers</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <!-- Featured Speaker 1 -->
-                    <div class="col-lg-6">
-                        <div class="speaker-card featured">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="speaker-image">
-                                        <img src="assets/img/events/speaker-8.webp" alt="Emily Rodriguez" class="img-fluid">
-                                        <div class="speaker-social">
-                                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="speaker-content">
-                                        <span class="speaker-category">Keynote Speaker</span>
-                                        <h3 class="speaker-name">Emily Rodriguez</h3>
-                                        <p class="speaker-title">Chief Technology Officer</p>
-                                        <p class="speaker-company">InnovaTech Global</p>
-                                        <div class="speaker-session">
-                                            <h4>Session: "The Future of AI in Business"</h4>
-                                        </div>
-                                        <a href="#" class="btn-speaker">View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End Featured Speaker 1 -->
-
-                    <!-- Featured Speaker 2 -->
-                    <div class="col-lg-6">
-                        <div class="speaker-card featured">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <div class="speaker-image">
-                                        <img src="assets/img/events/speaker-1.webp" alt="Marcus Thompson"
-                                            class="img-fluid">
-                                        <div class="speaker-social">
-                                            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="speaker-content">
-                                        <span class="speaker-category">Panel Speaker</span>
-                                        <h3 class="speaker-name">Marcus Thompson</h3>
-                                        <p class="speaker-title">VP of Product Strategy</p>
-                                        <p class="speaker-company">NextGen Solutions</p>
-                                        <div class="speaker-session">
-                                            <h4>Session: "Digital Transformation Strategies"</h4>
-                                        </div>
-                                        <a href="#" class="btn-speaker">View Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- End Featured Speaker 2 -->
-
-                </div>
-
-                <!-- Additional Speakers Grid -->
-                <div class="row gy-4 mt-4">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="speaker-card compact">
-                            <div class="speaker-image">
-                                <img src="assets/img/events/speaker-11.webp" alt="Sarah Chen" class="img-fluid">
-                                <div class="speaker-overlay">
-                                    <div class="speaker-social">
-                                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Sarah Chen</h4>
-                                <p class="speaker-title">Design Director</p>
-                                <p class="speaker-company">Creative Labs</p>
-                                <span class="speaker-topic">"Design Thinking Workshop"</span>
-                            </div>
-                        </div>
-                    </div><!-- End Speaker -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="speaker-card compact">
-                            <div class="speaker-image">
-                                <img src="assets/img/events/speaker-12.webp" alt="David Wilson" class="img-fluid">
-                                <div class="speaker-overlay">
-                                    <div class="speaker-social">
-                                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">David Wilson</h4>
-                                <p class="speaker-title">Data Scientist</p>
-                                <p class="speaker-company">Analytics Pro</p>
-                                <span class="speaker-topic">"Big Data Analytics"</span>
-                            </div>
-                        </div>
-                    </div><!-- End Speaker -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="speaker-card compact">
-                            <div class="speaker-image">
-                                <img src="assets/img/events/speaker-3.webp" alt="Lisa Martinez" class="img-fluid">
-                                <div class="speaker-overlay">
-                                    <div class="speaker-social">
-                                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Lisa Martinez</h4>
-                                <p class="speaker-title">Marketing Expert</p>
-                                <p class="speaker-company">Brand Builders</p>
-                                <span class="speaker-topic">"Digital Marketing Trends"</span>
-                            </div>
-                        </div>
-                    </div><!-- End Speaker -->
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="speaker-card compact">
-                            <div class="speaker-image">
-                                <img src="assets/img/events/speaker-9.webp" alt="James Parker" class="img-fluid">
-                                <div class="speaker-overlay">
-                                    <div class="speaker-social">
-                                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">James Parker</h4>
-                                <p class="speaker-title">CEO &amp; Founder</p>
-                                <p class="speaker-company">StartupHub</p>
-                                <span class="speaker-topic">"Entrepreneurship Panel"</span>
-                            </div>
-                        </div>
-                    </div><!-- End Speaker -->
-
-                </div>
-
-                <!-- Quote Section -->
-                <div class="row mt-5">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="speaker-quote">
-                            <blockquote>
-                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris."</p>
-                            </blockquote>
-                            <div class="quote-author">
-                                <img src="assets/img/events/speaker-2.webp" alt="Emily Rodriguez" class="img-fluid">
-                                <div class="author-info">
-                                    <h5>Emily Rodriguez</h5>
-                                    <span>Chief Technology Officer, InnovaTech Global</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section><!-- /Featured Speakers Section -->
-
-        <!-- Schedule Section -->
-        <section id="schedule" class="schedule section light-background">
-
-            <!-- Section Title -->
-            <div class="container section-title">
-                <h2>Schedule</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <!-- Day Selector -->
-                <div class="schedule-tabs">
-                    <ul class="nav nav-pills justify-content-center mb-5">
-                        <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#schedule-day1">Day
-                                1 - March 15</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#schedule-day2">Day 2 -
-                                March 16</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#schedule-day3">Day 3 -
-                                March 17</button>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Schedule Content -->
-                <div class="tab-content schedule-content">
-
-                    <!-- Day 1 Schedule -->
-                    <div class="tab-pane fade show active" id="schedule-day1">
-
-                        <!-- Track Headers -->
-                        <div class="track-headers">
-                            <div class="track-header development">
-                                <i class="bi bi-code-slash"></i>
-                                <span>Development Track</span>
-                            </div>
-                            <div class="track-header design">
-                                <i class="bi bi-palette"></i>
-                                <span>Design Track</span>
-                            </div>
-                            <div class="track-header business">
-                                <i class="bi bi-briefcase"></i>
-                                <span>Business Track</span>
-                            </div>
-                        </div>
-
-                        <div class="schedule-timeline">
-
-                            <!-- Time Slot 1 -->
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">9:00 AM</span>
-                                    <span class="duration">45 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card keynote" colspan="3">
-                                        <div class="session-type">
-                                            <i class="bi bi-megaphone"></i>
-                                            <span>Keynote</span>
-                                        </div>
-                                        <h4>Future of Digital Innovation</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-1.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Dr. Sarah Johnson</h5>
-                                                <span>Chief Technology Officer, TechCorp</span>
-                                            </div>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna aliqua.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Main Hall</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Time Slot 2 -->
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">10:15 AM</span>
-                                    <span class="duration">60 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card development">
-                                        <div class="session-type">
-                                            <i class="bi bi-laptop"></i>
-                                            <span>Workshop</span>
-                                        </div>
-                                        <h4>Advanced React Patterns</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-2.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Michael Chen</h5>
-                                                <span>Senior Developer</span>
-                                            </div>
-                                        </div>
-                                        <p>Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
-                                            aliquip ex ea commodo.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room A</span>
-                                            <span class="level beginner">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="session-card design">
-                                        <div class="session-type">
-                                            <i class="bi bi-brush"></i>
-                                            <span>Talk</span>
-                                        </div>
-                                        <h4>Design Systems at Scale</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-3.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Emily Rodriguez</h5>
-                                                <span>UX Director</span>
-                                            </div>
-                                        </div>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                            eu fugiat nulla.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room B</span>
-                                            <span class="level intermediate">Intermediate</span>
-                                        </div>
-                                    </div>
-                                    <div class="session-card business">
-                                        <div class="session-type">
-                                            <i class="bi bi-people"></i>
-                                            <span>Panel</span>
-                                        </div>
-                                        <h4>Scaling Tech Teams</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-4.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>David Park</h5>
-                                                <span>VP of Engineering</span>
-                                            </div>
-                                        </div>
-                                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
-                                            deserunt mollit.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room C</span>
-                                            <span class="level advanced">Advanced</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Break -->
-                            <div class="time-slot break-slot">
-                                <div class="time-label">
-                                    <span class="time">11:15 AM</span>
-                                    <span class="duration">30 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card break">
-                                        <div class="session-type">
-                                            <i class="bi bi-cup-hot"></i>
-                                            <span>Break</span>
-                                        </div>
-                                        <h4>Coffee Break &amp; Networking</h4>
-                                        <div class="session-meta">
-                                            <span class="venue">Main Lobby</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Time Slot 3 -->
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">11:45 AM</span>
-                                    <span class="duration">45 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card development">
-                                        <div class="session-type">
-                                            <i class="bi bi-code"></i>
-                                            <span>Talk</span>
-                                        </div>
-                                        <h4>Microservices Architecture</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-5.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Alex Thompson</h5>
-                                                <span>Solutions Architect</span>
-                                            </div>
-                                        </div>
-                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                            doloremque laudantium.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room A</span>
-                                            <span class="level advanced">Advanced</span>
-                                        </div>
-                                    </div>
-                                    <div class="session-card design">
-                                        <div class="session-type">
-                                            <i class="bi bi-phone"></i>
-                                            <span>Workshop</span>
-                                        </div>
-                                        <h4>Mobile-First Design</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-6.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Lisa Zhang</h5>
-                                                <span>Product Designer</span>
-                                            </div>
-                                        </div>
-                                        <p>Totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi
-                                            architecto beatae.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room B</span>
-                                            <span class="level beginner">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="session-card business">
-                                        <div class="session-type">
-                                            <i class="bi bi-graph-up"></i>
-                                            <span>Talk</span>
-                                        </div>
-                                        <h4>Product Growth Strategies</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-7.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>James Wilson</h5>
-                                                <span>Growth Manager</span>
-                                            </div>
-                                        </div>
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-                                            sed quia.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room C</span>
-                                            <span class="level intermediate">Intermediate</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Day 1 -->
-
-                    <!-- Day 2 Schedule -->
-                    <div class="tab-pane fade" id="schedule-day2">
-
-                        <div class="track-headers">
-                            <div class="track-header development">
-                                <i class="bi bi-code-slash"></i>
-                                <span>Development Track</span>
-                            </div>
-                            <div class="track-header design">
-                                <i class="bi bi-palette"></i>
-                                <span>Design Track</span>
-                            </div>
-                            <div class="track-header business">
-                                <i class="bi bi-briefcase"></i>
-                                <span>Business Track</span>
-                            </div>
-                        </div>
-
-                        <div class="schedule-timeline">
-
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">9:30 AM</span>
-                                    <span class="duration">45 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card keynote">
-                                        <div class="session-type">
-                                            <i class="bi bi-megaphone"></i>
-                                            <span>Keynote</span>
-                                        </div>
-                                        <h4>AI Revolution in Development</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-8.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Dr. Maria Santos</h5>
-                                                <span>AI Research Director</span>
-                                            </div>
-                                        </div>
-                                        <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                            consequat duis aute.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Main Hall</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">10:45 AM</span>
-                                    <span class="duration">60 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card development">
-                                        <div class="session-type">
-                                            <i class="bi bi-gear"></i>
-                                            <span>Workshop</span>
-                                        </div>
-                                        <h4>DevOps Best Practices</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-9.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Robert Kim</h5>
-                                                <span>DevOps Engineer</span>
-                                            </div>
-                                        </div>
-                                        <p>Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                            nulla pariatur.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room A</span>
-                                            <span class="level intermediate">Intermediate</span>
-                                        </div>
-                                    </div>
-                                    <div class="session-card design">
-                                        <div class="session-type">
-                                            <i class="bi bi-eye"></i>
-                                            <span>Talk</span>
-                                        </div>
-                                        <h4>Accessibility in Design</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-10.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Anna Martinez</h5>
-                                                <span>Accessibility Expert</span>
-                                            </div>
-                                        </div>
-                                        <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
-                                            deserunt mollit anim.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room B</span>
-                                            <span class="level beginner">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="session-card business">
-                                        <div class="session-type">
-                                            <i class="bi bi-currency-dollar"></i>
-                                            <span>Panel</span>
-                                        </div>
-                                        <h4>Funding Strategies for Startups</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-11.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Thomas Brown</h5>
-                                                <span>Investment Partner</span>
-                                            </div>
-                                        </div>
-                                        <p>Ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud
-                                            exercitation.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Room C</span>
-                                            <span class="level advanced">Advanced</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Day 2 -->
-
-                    <!-- Day 3 Schedule -->
-                    <div class="tab-pane fade" id="schedule-day3">
-
-                        <div class="track-headers">
-                            <div class="track-header development">
-                                <i class="bi bi-code-slash"></i>
-                                <span>Development Track</span>
-                            </div>
-                            <div class="track-header design">
-                                <i class="bi bi-palette"></i>
-                                <span>Design Track</span>
-                            </div>
-                            <div class="track-header business">
-                                <i class="bi bi-briefcase"></i>
-                                <span>Business Track</span>
-                            </div>
-                        </div>
-
-                        <div class="schedule-timeline">
-
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">10:00 AM</span>
-                                    <span class="duration">90 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card workshop">
-                                        <div class="session-type">
-                                            <i class="bi bi-tools"></i>
-                                            <span>Hands-on Workshop</span>
-                                        </div>
-                                        <h4>Building Your First App</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-12.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Kevin Lee</h5>
-                                                <span>Full-stack Developer</span>
-                                            </div>
-                                        </div>
-                                        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor
-                                            in reprehenderit.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Workshop Room</span>
-                                            <span class="level beginner">Beginner</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="time-slot">
-                                <div class="time-label">
-                                    <span class="time">12:00 PM</span>
-                                    <span class="duration">45 min</span>
-                                </div>
-                                <div class="sessions-row">
-                                    <div class="session-card keynote">
-                                        <div class="session-type">
-                                            <i class="bi bi-award"></i>
-                                            <span>Closing Keynote</span>
-                                        </div>
-                                        <h4>The Future is Collaborative</h4>
-                                        <div class="speaker">
-                                            <img src="assets/img/events/speaker-13.webp" alt="Speaker"
-                                                class="speaker-image">
-                                            <div class="speaker-details">
-                                                <h5>Jennifer Adams</h5>
-                                                <span>CEO, FutureTech</span>
-                                            </div>
-                                        </div>
-                                        <p>In voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint
-                                            occaecat cupidatat.</p>
-                                        <div class="session-meta">
-                                            <span class="venue">Main Hall</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Day 3 -->
-
-                </div>
-
-                <!-- Download CTA -->
-                <div class="text-center">
-                    <div class="download-cta">
-                        <h4>Get the Complete Schedule</h4>
-                        <p>Download the full agenda as PDF or add events to your calendar</p>
-                        <div class="cta-buttons">
-                            <a href="#" class="btn btn-primary">
-                                <i class="bi bi-download"></i>
-                                Download PDF
+    <header class="hero d-flex align-items-center"
+        style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/img/hero2.png') center/cover no-repeat; height: 100vh; margin-top: -80px;">
+        <div class="container ">
+            <div class="text-center text-white">
+                <div class="hero-subheader text-light">Museum & Warisan Budaya</div>
+                <h1 class="hero-title">
+                    Museum Bharugano Wuna<br />
+                    <span class="text-yellow" id="typed">Jejak Sejarah Tanah Muna</span>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var typed = new Typed('#typed', {
+                                strings: [
+                                    'Jejak Sejarah Tanah Muna',
+                                    'Pusat Edukasi Budaya',
+                                    'Pesona Peradaban Leluhur'
+                                ],
+                                typeSpeed: 90,
+                                backSpeed: 40,
+                                backDelay: 1200,
+                                startDelay: 800,
+                                loop: true
+                            });
+                        });
+                    </script>
+                </h1>
+
+                <p class="hero-description text-light mt-4">
+                    Jelajahi kekayaan sejarah, artefak bersejarah, dan nilai budaya masyarakat Muna
+                    dalam satu ruang edukatif yang modern, informatif, dan inspiratif.
+                </p>
+
+                <div class="mt-6 mt-lg-7">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="#tentang" class="btn btn-lg btn-yellow">
+                                Jelajahi Museum
                             </a>
-                            <a href="#" class="btn btn-outline-primary">
-                                <i class="bi bi-calendar-plus"></i>
-                                Add to Calendar
+                        </div>
+                        <div class="col-auto">
+                            <a href="/koleksi" class="btn btn-lg btn-outline-light">
+                                Lihat Koleksi
                             </a>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-        </section><!-- /Schedule Section -->
-
-        <!-- Tickets Section -->
-        <section id="tickets" class="tickets section">
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="ticket-card">
-                            <div class="ticket-header">
-                                <h3>General Admission</h3>
-                                <div class="ticket-price">
-                                    <span class="currency">$</span>
-                                    <span class="amount">149</span>
-                                    <span class="period">/ticket</span>
-                                </div>
-                                <p class="ticket-duration">3-Day Access</p>
-                            </div>
-                            <div class="ticket-body">
-                                <ul class="ticket-features">
-                                    <li><i class="bi bi-check-circle-fill"></i>Access to all conference sessions</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Welcome reception networking</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Coffee breaks and lunch included</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Digital conference materials</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Certificate of attendance</li>
-                                </ul>
-                            </div>
-                            <div class="ticket-footer">
-                                <a href="buy-tickets.html" class="btn btn-ticket">Register Now</a>
-                                <p class="availability-info">250 tickets remaining</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="ticket-card featured">
-                            <div class="popular-badge">Most Popular</div>
-                            <div class="ticket-header">
-                                <h3>VIP Experience</h3>
-                                <div class="ticket-price">
-                                    <span class="currency">$</span>
-                                    <span class="amount">299</span>
-                                    <span class="period">/ticket</span>
-                                </div>
-                                <p class="ticket-duration">3-Day Premium Access</p>
-                            </div>
-                            <div class="ticket-body">
-                                <ul class="ticket-features">
-                                    <li><i class="bi bi-check-circle-fill"></i>All General Admission benefits</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Reserved front row seating</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Exclusive VIP networking lounge</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Meet &amp; greet with keynote speakers
-                                    </li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Premium swag bag worth $150</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Private dinner with industry leaders
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="ticket-footer">
-                                <a href="buy-tickets.html" class="btn btn-ticket">Get VIP Access</a>
-                                <p class="availability-info">Limited to 50 attendees</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="ticket-card">
-                            <div class="ticket-header">
-                                <h3>Student Pass</h3>
-                                <div class="ticket-price">
-                                    <span class="original-price">$149</span>
-                                    <span class="currency">$</span>
-                                    <span class="amount">79</span>
-                                    <span class="period">/ticket</span>
-                                </div>
-                                <p class="ticket-duration">3-Day Student Access</p>
-                            </div>
-                            <div class="ticket-body">
-                                <ul class="ticket-features">
-                                    <li><i class="bi bi-check-circle-fill"></i>All conference sessions access</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Student networking events</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Career fair participation</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Mentorship program eligibility</li>
-                                    <li><i class="bi bi-check-circle-fill"></i>Student resource kit</li>
-                                </ul>
-                            </div>
-                            <div class="ticket-footer">
-                                <a href="buy-tickets.html" class="btn btn-ticket">Student Registration</a>
-                                <p class="availability-info">Valid student ID required</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row mt-5">
-                    <div class="col-12">
-                        <div class="ticket-info-bar">
-                            <div class="countdown-info">
-                                <h4><i class="bi bi-clock"></i> Early Bird Pricing Ends Soon!</h4>
-                                <div class="countdown d-flex justify-content-center" data-count="2026/12/15">
-                                    <div>
-                                        <h3 class="count-days"></h3>
-                                        <h4>Days</h4>
-                                    </div>
-                                    <div>
-                                        <h3 class="count-hours"></h3>
-                                        <h4>Hours</h4>
-                                    </div>
-                                    <div>
-                                        <h3 class="count-minutes"></h3>
-                                        <h4>Minutes</h4>
-                                    </div>
-                                    <div>
-                                        <h3 class="count-seconds"></h3>
-                                        <h4>Seconds</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="support-info">
-                                <p><strong>Need help choosing?</strong> Contact our support team</p>
-                                <a href="mailto:tickets@example.com" class="contact-link">tickets@example.com</a>
-                                <span class="divider">|</span>
-                                <a href="tel:+15551234567" class="contact-link">+1 (555) 123-4567</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+        </div>
+    </header>
+    <section class="section section-light py-5 mt-4 pt-4">
+        <svg class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+            <path class="wave-1" d="M-110 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </path>
+            <path class="wave-2" d="M-110 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </path>
+            <path class="wave-3" d="M-110 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </path>
+        </svg>
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="section-title">Eksplor Museum Bharugano Wuna</h2>
+                <p class="text-muted">Nikmati pengalaman digital interaktif museum kami</p>
             </div>
-
-        </section><!-- /Tickets Section -->
-
-        <!-- Sponsors Section -->
-        <section id="sponsors" class="sponsors section">
-
-            <div class="container">
-
-                <div class="row g-0 clients-wrap">
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-1.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-2.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-3.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-4.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-5.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-6.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-7.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
-                    <div class="col-xl-3 col-md-4 client-logo">
-                        <img src="assets/img/clients/clients-8.webp" class="img-fluid" alt="">
-                    </div><!-- End Client Item -->
-
+            <div class="row text-center">
+                <div class="col-6 col-md-3 p-0">
+                    <a href="#" class="card card-link card-link-pop bg-transparent rounded-0 py-3">
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-md">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z" />
+                                <path d="M3 6m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                            </svg><br>
+                            <h3 class="mb-1">Video Profil</h3>
+                            <p class="text-muted">
+                                Tonton Video
+                            </p>
+                        </div>
+                    </a>
                 </div>
-
+                <div class="col-6 col-md-3 p-0">
+                    <a href="#" class="card card-link card-link-pop bg-transparent rounded-0 py-3">
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-md">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 7c1.143 0 2.235 .035 3.275 .104c1.017 .068 1.95 .207 2.798 .42c.813 .203 1.52 .505 2.119 .909a3.903 3.903 0 0 1 1.328 1.531c.326 .657 .48 1.48 .48 2.466c0 1.006 -.189 1.91 -.574 2.707c-.375 .779 -.886 1.396 -1.537 1.848a3.696 3.696 0 0 1 -2.16 .66c-.509 0 -.97 -.068 -1.382 -.21a5.84 5.84 0 0 1 -1.17 -.548a18.45 18.45 0 0 1 -1.045 -.695a9.104 9.104 0 0 0 -1.001 -.63a2.376 2.376 0 0 0 -1.13 -.301c-.373 0 -.75 .097 -1.132 .3c-.316 .17 -.65 .38 -1 .63c-.322 .23 -.67 .462 -1.047 .695a5.78 5.78 0 0 1 -1.168 .548c-.413 .142 -.872 .21 -1.378 .21a3.706 3.706 0 0 1 -2.165 -.659c-.651 -.452 -1.162 -1.07 -1.537 -1.848c-.385 -.798 -.574 -1.7 -.574 -2.709c-.004 -.98 .15 -1.802 .477 -2.46a3.897 3.897 0 0 1 1.33 -1.531c.6 -.403 1.307 -.704 2.12 -.907a16.088 16.088 0 0 1 2.8 -.423c1.04 -.071 2.13 -.107 3.273 -.107z" />
+                            </svg><br>
+                            <h3 class="mb-1">Virtual Tour</h3>
+                            <p class="text-muted">
+                                Coba Sekarang
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 p-0">
+                    <a href="#" class="card card-link card-link-pop bg-transparent rounded-0 py-3">
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-md">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4z" />
+                                <path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" />
+                                <path d="M8 9v2" />
+                                <path d="M7 10h2" />
+                                <path d="M14 10h2" />
+                            </svg><br>
+                            <h3 class="mb-1">Game Roblox</h3>
+                            <p class="text-muted">
+                                Mainkan Game
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-3 p-0">
+                    <a href="#" class="card card-link card-link-pop bg-transparent rounded-0 py-3">
+                        <div class="card-body">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-md">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M15 21h-9a1 1 0 0 1 -1 -1v-16a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v7" />
+                                <path d="M19 22v.01" />
+                                <path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                                <path d="M11 17a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                            </svg><br>
+                            <h3 class="mb-1">Quiz</h3>
+                            <p class="text-muted">
+                                Mulai Quiz
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
+        </div>
 
-        </section><!-- /Sponsors Section -->
-
-        <!-- Call To Action Section -->
-        <section id="call-to-action" class="call-to-action section dark-background">
-
-            <div class="container">
-
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="display-4 mb-4">Ready to Transform Your Professional Network?</h2>
-                        <p class="lead mb-5">Join industry leaders and innovators at the premier professional
-                            development conference. Secure your place among 5,000+ forward-thinking professionals from
-                            25+ countries.</p>
-                    </div>
+    </section>
+    <section class="section border-top py-5">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="section-title">Waktu Kunjungan Museum</h2>
+                <div class="section-description">
+                    Informasi jam operasional Museum Bharugano Wuna untuk memudahkan pengunjung merencanakan
+                    kunjungan.
                 </div>
-
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-10">
-                        <div class="stats-wrapper">
-                            <div class="row g-4">
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">
-                                            <i class="bi bi-people"></i>
-                                        </div>
-                                        <div class="stat-number" data-purecounter-start="0" data-purecounter-end="5000"
-                                            data-purecounter-duration="2">5000</div>
-                                        <div class="stat-label">Expected Attendees</div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6 mb-3 mb-lg-0">
+                    <img src="{{ asset('img/image.png') }}" alt="Waktu Kunjungan Museum" class="img-fluid rounded-3">
+                </div>
+                <div class="col-lg-6">
+                    <div class="space-y-6">
+                        <div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="shape shape-lg bg-blue-lt">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="icon icon-lg">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                                            <path d="M16 3l0 4" />
+                                            <path d="M8 3l0 4" />
+                                            <path d="M4 11l16 0" />
+                                            <path d="M8 15h2v2h-2z" />
+                                        </svg>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">
-                                            <i class="bi bi-person-badge"></i>
-                                        </div>
-                                        <div class="stat-number" data-purecounter-start="0" data-purecounter-end="85"
-                                            data-purecounter-duration="2">85</div>
-                                        <div class="stat-label">Expert Speakers</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">
-                                            <i class="bi bi-globe"></i>
-                                        </div>
-                                        <div class="stat-number" data-purecounter-start="0" data-purecounter-end="25"
-                                            data-purecounter-duration="2">25</div>
-                                        <div class="stat-label">Countries Represented</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-6">
-                                    <div class="stat-item">
-                                        <div class="stat-icon">
-                                            <i class="bi bi-calendar-event"></i>
-                                        </div>
-                                        <div class="stat-number" data-purecounter-start="0" data-purecounter-end="3"
-                                            data-purecounter-duration="2">3</div>
-                                        <div class="stat-label">Days of Excellence</div>
-                                    </div>
+                                <div class="col">
+                                    <h3 class="h2 mb-2">Hari Operasional</h3>
+                                    <p class="text-muted m-0">
+                                        Museum Bharugano Wuna buka setiap <strong>Senin - Sabtu</strong> dan tutup
+                                        pada
+                                        hari
+                                        Minggu
+                                        serta hari libur nasional.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center">
-                        <div class="cta-content">
-                            <h3 class="mb-4">Early Bird Registration Ends Soon</h3>
-                            <p class="mb-4">Secure your spot at the exclusive rate. Limited availability for premium
-                                networking sessions and workshop access.</p>
-                            <div class="cta-buttons">
-                                <a href="#" class="btn btn-primary btn-lg me-3">Register Now</a>
-                                <a href="#" class="btn btn-outline-secondary btn-lg">Download Brochure</a>
-                            </div>
-                            <div class="security-note mt-4">
-                                <small>
-                                    <i class="bi bi-shield-check me-2"></i>
-                                    Secure payment processing • Full refund policy • ISO certified event management
-                                </small>
+                        <div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="shape shape-lg bg-green-lt">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-lg icons-tabler-outline icon-tabler-clock">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                            <path d="M12 7v5l3 3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="h2 mb-2">Jam Buka</h3>
+                                    <p class="text-muted m-0">
+                                        Pukul <strong>08.00 - 16.00 WITA</strong>. Pengunjung disarankan datang
+                                        paling
+                                        lambat
+                                        1 jam sebelum jam tutup.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
+                        <div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="shape shape-lg bg-orange-lt">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-lg icons-tabler-outline icon-tabler-plus">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path d="M12 5l0 14" />
+                                            <path d="M5 12l14 0" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <h3 class="h2 mb-2">Waktu Terbaik Berkunjung</h3>
+                                    <p class="text-muted m-0">
+                                        Waktu terbaik untuk berkunjung adalah pada pagi hari agar dapat menikmati
+                                        seluruh
+                                        koleksi
+                                        museum dengan lebih nyaman dan tenang.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
-        </section><!-- /Call To Action Section -->
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="testimonials section">
-
-            <!-- Section Title -->
-            <div class="container section-title">
-                <h2>Testimonials</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container">
-
-                <div class="testimonial-slider swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 4000
-              },
-              "slidesPerView": 1,
-              "spaceBetween": 30,
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "breakpoints": {
-                "768": {
-                  "slidesPerView": 2
-                },
-                "1200": {
-                  "slidesPerView": 3
-                }
-              }
-            }
-          </script>
-
-                    <div class="swiper-wrapper">
-
-                        <!-- Testimonial Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="testimonial-header">
-                                    <img src="assets/img/person/person-f-12.webp" alt="Client" class="img-fluid"
-                                        loading="lazy">
-                                    <div class="rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="testimonial-body">
-                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                        deserunt mollit anim id est laborum consectetur adipiscing elit sed eiusmod
-                                        tempor.</p>
-                                </div>
-                                <div class="testimonial-footer">
-                                    <h5>Jessica Martinez</h5>
-                                    <span>UX Designer</span>
-                                    <div class="quote-icon">
-                                        <i class="bi bi-chat-quote-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Testimonial Slide -->
-
-                        <!-- Testimonial Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="testimonial-header">
-                                    <img src="assets/img/person/person-m-8.webp" alt="Client" class="img-fluid"
-                                        loading="lazy">
-                                    <div class="rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="testimonial-body">
-                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in
-                                        culpa.</p>
-                                </div>
-                                <div class="testimonial-footer">
-                                    <h5>David Rodriguez</h5>
-                                    <span>Software Engineer</span>
-                                    <div class="quote-icon">
-                                        <i class="bi bi-chat-quote-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Testimonial Slide -->
-
-                        <!-- Testimonial Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="testimonial-header">
-                                    <img src="assets/img/person/person-f-6.webp" alt="Client" class="img-fluid"
-                                        loading="lazy">
-                                    <div class="rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="testimonial-body">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis
-                                        nostrud.</p>
-                                </div>
-                                <div class="testimonial-footer">
-                                    <h5>Amanda Wilson</h5>
-                                    <span>Creative Director</span>
-                                    <div class="quote-icon">
-                                        <i class="bi bi-chat-quote-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Testimonial Slide -->
-
-                        <!-- Testimonial Slide 4 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="testimonial-header">
-                                    <img src="assets/img/person/person-m-12.webp" alt="Client" class="img-fluid"
-                                        loading="lazy">
-                                    <div class="rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="testimonial-body">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                        doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore
-                                        veritatis.</p>
-                                </div>
-                                <div class="testimonial-footer">
-                                    <h5>Ryan Thompson</h5>
-                                    <span>Business Analyst</span>
-                                    <div class="quote-icon">
-                                        <i class="bi bi-chat-quote-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Testimonial Slide -->
-
-                        <!-- Testimonial Slide 5 -->
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <div class="testimonial-header">
-                                    <img src="assets/img/person/person-f-10.webp" alt="Client" class="img-fluid"
-                                        loading="lazy">
-                                    <div class="rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="testimonial-body">
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                        praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                        excepturi.</p>
-                                </div>
-                                <div class="testimonial-footer">
-                                    <h5>Rachel Chen</h5>
-                                    <span>Project Manager</span>
-                                    <div class="quote-icon">
-                                        <i class="bi bi-chat-quote-fill"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Testimonial Slide -->
-
+        </div>
+    </section>
+    <section class="section py-5 section-light border-top">
+        <div class="container">
+            <div class="section-header text-start mx-0 mb-4">
+                <h2 class="section-title">Berita Terbaru Museum</h2>
+            </div>
+            <div class="row row-cards">
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="swiper-navigation">
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-
                 </div>
-
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </section><!-- /Testimonials Section -->
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery section">
-
-            <div class="container-fluid">
-
-                <div class="row gy-4 justify-content-center">
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-1.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-1.webp" title="Gallery 1"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-2.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-2.webp" title="Gallery 2"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-3.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-3.webp" title="Gallery 3"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-4.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-4.webp" title="Gallery 4"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-5.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-5.webp" title="Gallery 5"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-6.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-6.webp" title="Gallery 6"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-7.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-7.webp" title="Gallery 7"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="gallery-item h-100">
-                            <img src="assets/img/events/gallery-8.webp" class="img-fluid" alt="">
-                            <div class="gallery-links d-flex align-items-center justify-content-center">
-                                <a href="assets/img/events/gallery-8.webp" title="Gallery 8"
-                                    class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
-                                <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Gallery Item -->
-
-                </div>
-
+        </div>
+        <div class="container mt-4">
+            <div class="section-header text-start mx-0 mb-4">
+                <h2 class="section-title">Kegiatan Terbaru Museum</h2>
             </div>
-
-        </section><!-- /Gallery Section -->
-
-    </main>
+            <div class="row row-cards">
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Berita 1 -->
+                <div class="col-md col-12">
+                    <div class="card bg-transparent border-0">
+                        <!-- Photo -->
+                        <a href="#" class="img-responsive img-responsive-21x9 rounded-3"
+                            style="background-image: url({{ asset('img/image.png') }})">
+                        </a>
+                        <div class="card-body px-0 ">
+                            <a href="#" class="text-dark">
+                                Puluhan siswa SMA melakukan kunjungan edukatif untuk mengenal sejarah dan budaya
+                                lokal
+                                Muna.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

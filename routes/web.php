@@ -26,8 +26,6 @@ Route::get('/kegiatan/{slug}', [KegiatanController::class, 'show'])->name('kegia
 Route::get('/koleksi', [KoleksiController::class, 'index'])->name('koleksi.index');
 Route::get('/koleksi/{id}', [KoleksiController::class, 'show'])->name('koleksi.show');
 Route::get('/kontak', [ContactController::class, 'contact']);
-Route::get('/galeri', [GaleryController::class, 'galery']);
-Route::get('/quiz', [QuizController::class, 'index']);
 
 
 Route::get('/quiz', [QuizController::class, 'start'])->name('quiz.start');

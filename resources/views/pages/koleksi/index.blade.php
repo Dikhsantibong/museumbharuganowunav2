@@ -1,27 +1,66 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="main">
+    <header class="img-bg"
+        style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/img/hero.png') center/cover no-repeat; margin-top: -80px;">
+        <div class="hero position-relative py-12 pb-9">
+            <div class="container text-center">
 
-        <!-- Page Title -->
-        <div class="page-title dark-background" style="background-image: url(assets/img/header/image.png);">
-            <div class="container position-relative">
-                <h1>Koleksi</h1>
-                <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam
-                    molestias.</p>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="/">Beranda</a></li>
-                        <li class="current">Koleksi</li>
-                    </ol>
-                </nav>
+                <h1 class="hero-title text-yellow mb-3" style="font-size: 3rem; font-weight: 700;">
+                    Koleksi Museum
+                </h1>
+
+                <p class="hero-description text-white text-opacity-75 mb-5" style="max-width: 700px; margin: auto;">
+                    Jelajahi berbagai koleksi bersejarah Museum Bharugano Wuna yang memiliki nilai sejarah penting bagi
+                    masyarakat.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <form class="row g-3 justify-content-center" method="GET" action="{{ route('koleksi.index') }}">
+                            <div class="col-9">
+                                <input type="text" name="search" value="{{ request('search') }}"
+                                    placeholder="Cari koleksi..." class="form-control form-control-solid">
+                            </div>
+                            <div class="col-3">
+                                <button type="submit" class="btn btn-yellow w-100 fw-bold">Cari</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <!-- End Page Title -->
-
-        <section id="gallery" class="gallery section">
+    </header>
+    <main class="main">
+        <section class="section py-5">
             <div class="container">
                 <div class="row">
+                    @if (request('search'))
+                        <style>
+                            .search-result {
+                                display: inline-block;
+                                /* Biar width mengikuti isi */
+                                background: #fff;
+                            }
+                        </style>
+                        <div class="mb-4">
+                            <div class="search-result border rounded-3 px-3 py-2 text-muted">
+                                Hasil Pencarian : {{ request('search') }}
+                                <a href="/koleksi" class="ms-3 align-items-center text-muted">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="icon m-1">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M18 6l-12 12" />
+                                        <path d="M6 6l12 12" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    @endif
                     <div class="col-lg-8">
 
                         @php
@@ -44,8 +83,8 @@
                                             $data = $koleksi[$index];
                                         @endphp
 
-                                        <div class="card rounded-4 mb-4">
-                                            <div class="gallery-item h-100 rounded-bottom-0 rounded-top-4">
+                                        <div class="card mb-4">
+                                            <div class="gallery-item h-100">
                                                 <img src="{{ $data->foto->first()
                                                     ? asset('storage/' . $data->foto->first()->foto)
                                                     : asset('assets/img/not-found/image.png') }}"

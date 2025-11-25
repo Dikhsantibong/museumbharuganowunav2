@@ -149,7 +149,10 @@ class KoleksiResource extends Resource
         ])
             ->defaultSort('id_koleksi', 'desc')
             ->searchable()
-            ->filters([]);
+            ->filters([])
+            ->bulkActions([
+                Tables\Actions\DeleteBulkAction::make(),
+            ]);
     }
 
     public static function getPages(): array

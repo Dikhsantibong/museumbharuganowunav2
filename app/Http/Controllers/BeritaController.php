@@ -20,7 +20,10 @@ class BeritaController extends Controller
             ->latest()
             ->get();
 
-        return view('pages.berita.index', compact('berita'));
+        $beritaTerbaru = Berita::orderBy('created_at', 'desc')->where('status', 'publish')->limit(5)->get();
+        $kegiatanTerakhir = Kegiatan::orderBy('created_at', 'desc')->limit(5)->get();
+
+        return view('pages.berita.index', compact('berita', 'beritaTerbaru', 'kegiatanTerakhir'));
     }
 
     public function show($slug)

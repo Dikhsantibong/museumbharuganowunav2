@@ -12,10 +12,10 @@
     </style>
     <header class="img-bg"
         style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('/img/hero.png') center/cover no-repeat; margin-top: -80px;">
-        <div class="hero position-relative py-12">
+        <div class="hero position-relative py-12 pb-9">
             <div class="container text-center">
 
-                <h1 class="hero-title text-white mb-3" style="font-size: 3rem; font-weight: 700;">
+                <h1 class="hero-title text-yellow mb-3" style="font-size: 3rem; font-weight: 700;">
                     Berita Terbaru
                 </h1>
 
@@ -29,7 +29,7 @@
                         <form class="row g-3 justify-content-center" method="GET" action="{{ route('berita.index') }}">
                             <div class="col-9">
                                 <input type="text" name="search" placeholder="Cari berita..."
-                                    class="form-control form-control-solid">
+                                    value="{{ request('search') }}" class="form-control form-control-solid">
                             </div>
                             <div class="col-3">
                                 <button type="submit" class="btn btn-yellow w-100 fw-bold">Cari</button>
@@ -44,7 +44,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-lg-8">
                     @if (request('search'))
                         <style>
                             .search-result {
@@ -53,7 +53,7 @@
                                 background: #fff;
                             }
                         </style>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <div class="search-result border rounded-3 px-3 py-2 text-muted">
                                 Hasil Pencarian : {{ request('search') }}
                                 <a href="/berita" class="ms-3 align-items-center text-muted">
@@ -97,8 +97,34 @@
                         </a>
                     @endforeach
                 </div>
-                <div class="col-lg-3 d-none d-lg-flex">
+                <div class="col-lg-4">
 
+                    <!-- SIDEBAR WRAPPER -->
+                    <div class="sticky-top z-1" style="top: 90px;">
+                        <h3>Berita Terbaru</h3>
+                        @forelse($beritaTerbaru as $data)
+                            <div class="row mb-3 align-items-start">
+                                <div class="col-3">
+                                    <div class="img-responsive rounded-2 border img-responsive-1x1"
+                                        style="background-image: url({{ asset('storage/' . $data->thumbnail) }})">
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <a href="{{ route('berita.show', $data->slug) }}"
+                                        class="fw-semibold fs-4 d-block text-dark text-decoration-none"
+                                        style="font-size: 14px;">
+                                        {{ Str::limit(strip_tags($data->judul), 125, '...') }}
+                                    </a>
+                                    <small class="text-muted">
+                                        {{ $data->created_at->format('d M Y') }}
+                                    </small>
+                                </div>
+                            </div>
+                        @empty
+                            <p class="text-muted text-center">Belum ada berita</p>
+                        @endforelse
+
+                    </div>
                 </div>
             </div>
         </div>

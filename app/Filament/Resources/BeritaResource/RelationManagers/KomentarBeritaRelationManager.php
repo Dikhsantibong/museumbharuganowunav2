@@ -35,17 +35,6 @@ class KomentarBeritaRelationManager extends RelationManager
                     ->label('Isi Komentar')
                     ->wrap()
                     ->limit(80),
-
-                Tables\Columns\TextColumn::make('status')
-                    ->label('Status')
-                    ->badge()
-                    ->color(fn($state) => match ($state) {
-                        'approved' => 'success',
-                        'rejected' => 'danger',
-                        'pending'  => 'warning',
-                        default    => 'gray',
-                    }),
-
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Tanggal')
                     ->dateTime('d M Y H:i'),

@@ -19,10 +19,10 @@
     <a class="nav-link" href="/koleksi"><span
             class="nav-link-title {{ Request::is(patterns: 'koleksi*') ? 'text-yellow' : '' }}">Koleksi</span></a>
 </div>
-<div class="nav-item ">
+{{-- <div class="nav-item ">
     <a class="nav-link" href="/galeri"><span
             class="nav-link-title {{ Request::is(patterns: 'galeri') ? 'text-yellow' : '' }}">Galeri</span></a>
-</div>
+</div> --}}
 <div class="nav-item ">
     <a class="nav-link" href="/kontak"><span
             class="nav-link-title {{ Request::is(patterns: 'kontak') ? 'text-yellow' : '' }}">Kontak</span></a>

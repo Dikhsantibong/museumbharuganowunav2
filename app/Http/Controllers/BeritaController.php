@@ -14,11 +14,14 @@ class BeritaController extends Controller
         $berita = Berita::with('komentar')
             ->where('status', 'publish')
             ->when($request->search, function ($query) use ($request) {
-                $query->where('judul', 'like', '%' . $request->search . '%')
-                    ->orWhere('konten', 'like', '%' . $request->search . '%');
+                $query->where(function ($q) use ($request) {
+                    $q->where('judul', 'like', '%' . $request->search . '%')
+                        ->orWhere('konten', 'like', '%' . $request->search . '%');
+                });
             })
-            ->latest()
-            ->get();
+            ->orderByDesc('tanggal_publikasi')
+            ->paginate(10)
+            ->appends($request->query());
 
         return view('pages.berita.index', compact('berita'));
     }
@@ -54,6 +57,5 @@ class BeritaController extends Controller
 
         return redirect()->to(route('berita.show', $berita->slug) . '#komentar')
             ->with('success', 'Komentar berhasil dikirim.');
-
     }
 }

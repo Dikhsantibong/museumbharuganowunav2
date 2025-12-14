@@ -11,19 +11,14 @@ class KoleksiController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Koleksi::with('foto');
-
-        // Jika ada request search
-        if ($request->filled('search')) {
-            $search = $request->search;
-
-            $query->where(function ($q) use ($search) {
-                $q->where('nama_koleksi', 'like', "%{$search}%")
+        $koleksi = Koleksi::with('foto')
+            ->when($request->search, function ($query, $search) {
+                $query->where('nama_koleksi', 'like', "%{$search}%")
                     ->orWhere('jenis_koleksi', 'like', "%{$search}%");
-            });
-        }
-
-        $koleksi = $query->get();
+            })
+            ->orderByDesc('created_at')
+            ->paginate(18)
+            ->appends($request->query());
 
         return view('pages.koleksi.index', compact('koleksi'));
     }
@@ -33,5 +28,4 @@ class KoleksiController extends Controller
         $koleksi = Koleksi::with('foto')->findOrFail($id);
         return view('pages.koleksi.detail', compact('koleksi'));
     }
-
 }

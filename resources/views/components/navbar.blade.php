@@ -1,7 +1,7 @@
 <header class="navbar navbar-expand-lg navbar-transparent sticky-top py-2">
     <div class="container">
         <a href="/" class="navbar-brand navbar-brand-autodark">
-            <img src="https://sipengadu.eng.uho.ac.id/logo/image.png" class="navbar-brand-image" alt="">
+            <img src="{{ asset('img/logo.png') }}" class="navbar-brand-image" alt="">
             Museum Bharugano Wuna
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"

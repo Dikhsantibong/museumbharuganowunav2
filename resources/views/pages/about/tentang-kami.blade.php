@@ -46,7 +46,7 @@
                     <!-- GAMBAR UTAMA -->
                     <div class="row justify-content-left mb-5 text-center">
                         <figure class="image-box">
-                            <img src="https://butonpos.fajar.co.id/wp-content/uploads/2022/02/IMG-20220214-WA0021.jpg"
+                            <img src="{{ asset('images/about-us/tentang-kami1.JPG') }}"
                                 alt="Museum Bharugano Wuna" class="img-fluid rounded shadow">
                             <figcaption class="mt-2 text-muted small">
                                 Bangunan Rumah Adat Bharugano Wuna yang menjadi pusat kegiatan museum.
@@ -82,7 +82,7 @@
                     <!-- GAMBAR KOLEKSI -->
                     <div class="row justify-content-left mb-5 text-center">
                         <figure>
-                            <img src="https://telisik.id/wp-content/uploads/2022/03/Rumah-Adat-Muna-1024x576.jpg"
+                            <img src="{{ asset('images/about-us/tentang-kami2.JPG') }}"
                                 alt="Rumah Adat Muna" class="img-fluid rounded shadow">
                             <figcaption class="mt-2 text-muted small">
                                 Rumah Adat Bharugano Wuna yang menjadi ikon arsitektur kebudayaan Muna.

@@ -5,7 +5,7 @@ namespace App\Filament\Widgets;
 use Filament\Widgets\Widget;
 use App\Models\KegiatanFoto;
 
-class LatestGalleryWidget extends Widget
+class bLatestGalleryWidget extends Widget
 {
     protected static string $view = 'filament.widgets.latest-gallery';
 

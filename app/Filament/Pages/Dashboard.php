@@ -4,9 +4,9 @@ namespace App\Filament\Pages;
 
 use Filament\Pages\Dashboard as BaseDashboard;
 use App\Filament\Widgets\StatsOverview;
-use App\Filament\Widgets\KegiatanChart;
-use App\Filament\Widgets\PublishStatusChart;
-use App\Filament\Widgets\LatestGalleryWidget;
+use App\Filament\Widgets\acKegiatanChart;
+use App\Filament\Widgets\zaPublishStatusChart;
+use App\Filament\Widgets\bLatestGalleryWidget;
 
 class Dashboard extends BaseDashboard
 {
@@ -28,12 +28,11 @@ class Dashboard extends BaseDashboard
                 StatsOverview::class, // selalu paling atas
             ],
             'charts' => [
-                KegiatanChart::class,
-                PublishStatusChart::class,
+                zaPublishStatusChart::class,
+                acKegiatanChart::class,
+                bLatestGalleryWidget::class,
             ],
-            'gallery' => [
-                LatestGalleryWidget::class,
-            ],
+            'gallery' => [],
         ];
     }
 

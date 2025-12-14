@@ -5,7 +5,7 @@ namespace App\Filament\Widgets;
 use Filament\Widgets\LineChartWidget;
 use App\Models\Kegiatan;
 
-class KegiatanChart extends LineChartWidget
+class acKegiatanChart extends LineChartWidget
 {
     protected static ?string $heading = 'Grafik Kegiatan Per Bulan';
 

@@ -6,7 +6,7 @@ use Filament\Widgets\PieChartWidget;
 use App\Models\Berita;
 use App\Models\Kegiatan;
 
-class PublishStatusChart extends PieChartWidget
+class zaPublishStatusChart extends PieChartWidget
 {
     protected static ?string $heading = 'Status Publish Konten';
 

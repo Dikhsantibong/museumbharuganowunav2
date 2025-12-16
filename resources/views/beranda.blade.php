@@ -65,7 +65,7 @@
             </div>
             <div class="row text-center">
                 <div class="col-6 col-md-3 p-0">
-                    <a href="https://www.youtube.com/watch?v=BHs38wujF9U&feature=youtu.be" target="_blank" class="card card-link card-link-pop bg-transparent rounded-0 py-3">
+                    <a href="https://youtu.be/oSp0yNkav6g" target="_blank" class="card card-link card-link-pop bg-transparent rounded-0 py-3">
                         <div class="card-body">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"

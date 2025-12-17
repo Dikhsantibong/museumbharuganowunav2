@@ -34,7 +34,7 @@
                                 <div>
                                     <strong>Alamat</strong>
                                     <p class="mb-0 text-muted">
-                                        Museum Bharugano Wuna, Kabupaten Muna, Sulawesi Tenggara
+                                        Museum Bharugano Wuna, Jl. By Pass Raha, Kabupaten Muna, Sulawesi Tenggara 93611
                                     </p>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                                 </span>
                                 <div>
                                     <strong>Telepon</strong>
-                                    <p class="mb-0 text-muted">+62 812-xxxx-xxxx</p>
+                                    <p class="mb-0 text-muted">+62 822-6499-7892</p>
                                 </div>
                             </div>
 
@@ -55,7 +55,7 @@
                                 </span>
                                 <div>
                                     <strong>Email</strong>
-                                    <p class="mb-0 text-muted">info@museumwuna.id</p>
+                                    <p class="mb-0 text-muted">museumbharunowuna@gmail.com</p>
                                 </div>
                             </div>
 
@@ -69,7 +69,7 @@
                         <div class="card-body p-4">
                             <h3 class="mb-4" style="font-weight:600;">Kirim Pesan</h3>
 
-                            <form action="#" method="POST">
+                            <form action="{{ route('kontak.kirim') }}" method="POST">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Nama Lengkap</label>

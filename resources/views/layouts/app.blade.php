@@ -41,6 +41,15 @@
 </head>
 
 <body class=" body-marketing body-gradient">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RBMF0MBR3Y"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RBMF0MBR3Y');
+    </script>
     <script src="{{ asset('dist/js/demo-theme.min.js') }}"></script>
     <div class="page bg-white">
         @include('components.alert.error')

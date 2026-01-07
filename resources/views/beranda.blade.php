@@ -281,19 +281,19 @@
                     <div class="col-md col-12">
                         <div class="card bg-transparent border-0">
                             <!-- Photo -->
-                            <a href="{{ route('berita.show', $data->slug) }}"
+                            <a href="{{ route('kegiatan.show', $data->slug) }}"
                                 class="img-responsive img-responsive-21x9 rounded-3 border"
                                 style="background-image: url({{ asset('storage/' . $data->thumbnail) }})">
                             </a>
                             <div class="card-body px-0 ">
-                                <a href="{{ route('berita.show', $data->slug) }}" class="text-dark">
+                                <a href="{{ route('kegiatan.show', $data->slug) }}" class="text-dark">
                                     {{ Str::limit(strip_tags($data->judul), 150, '...') }}
                                 </a>
                             </div>
                         </div>
                     </div>
                 @empty
-                    <p class="text-muted text-center">Belum ada berita</p>
+                    <p class="text-muted text-center">Belum ada kegiatan</p>
                 @endforelse
             </div>
         </div>

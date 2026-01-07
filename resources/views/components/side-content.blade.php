@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="col-9">
-                        <a href="{{ route('berita.show', $data->slug) }}"
+                        <a href="{{ route('kegiatan.show', $data->slug) }}"
                             class="fw-semibold fs-4 d-block text-dark text-decoration-none" style="font-size: 14px;">
                             {{ Str::limit(strip_tags($data->judul), 125, '...') }}
                         </a>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             @empty
-                <p class="text-muted text-center">Belum ada berita</p>
+                <p class="text-muted text-center">Belum ada kegiatan</p>
             @endforelse
         </div>
         <div class="mb-3">

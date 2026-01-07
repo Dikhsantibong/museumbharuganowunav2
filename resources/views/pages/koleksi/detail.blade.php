@@ -36,7 +36,7 @@
                                         </div>
                                     @endforeach
                                 @else
-                                    <img src="{{ asset('assets/img/not-found/image.png') }}" class="img-fluid rounded"
+                                    <img src="{{ asset('img/image.png') }}" class="img-fluid rounded"
                                         alt="">
                                 @endif
                             </div>
